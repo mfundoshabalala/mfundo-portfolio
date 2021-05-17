@@ -1,0 +1,67 @@
+{
+  "name": "resources_manager",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "build:base-css": "tailwindcss build ./styles/tailwind.base.css -o ./styles/base.css",
+    "mock-server": "json-server -w ./data/db.json -p 4000"
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.1.1",
+    "@heroicons/react": "^1.0.1",
+    "axios": "^0.21.1",
+    "dayjs": "^1.10.4",
+    "isomorphic-fetch": "^3.0.0",
+    "lodash": "^4.17.21",
+    "next": "latest",
+    "next-themes": "^0.0.14",
+    "prop-types": "^15.7.2",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "@types/isomorphic-fetch": "^0.0.35",
+    "@types/lodash": "^4.14.169",
+    "@types/prop-types": "^15.7.3",
+    "@types/react": "^17.0.5",
+    "@typescript-eslint/eslint-plugin": "^4.22.1",
+    "@typescript-eslint/parser": "^4.22.1",
+    "autoprefixer": "^10.2.5",
+    "eslint": "^7.25.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-typescript": "^2.4.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^6.0.0",
+    "lint-staged": "^10.5.4",
+    "postcss": "^8.2.14",
+    "prettier": "2.2.1",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^22.0.0",
+    "tailwindcss": "^2.1.2",
+    "typescript": "^4.2.4"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "eslint . --fix",
+      "git add"
+    ],
+    "src/**/*.css": [
+      "stylelint --syntax css --fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "license": "MIT"
+}
