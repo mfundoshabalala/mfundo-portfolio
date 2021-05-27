@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev-debug": "cross-env NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
     "start": "next start",
     "build:base-css": "tailwindcss build ./styles/tailwind.base.css -o ./styles/base.css",
@@ -13,6 +14,7 @@
     "@headlessui/react": "^1.1.1",
     "@heroicons/react": "^1.0.1",
     "axios": "^0.21.1",
+    "cross-env": "^7.0.3",
     "dayjs": "^1.10.4",
     "isomorphic-fetch": "^3.0.0",
     "lodash": "^4.17.21",
