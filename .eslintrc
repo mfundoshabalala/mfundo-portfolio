@@ -1,49 +1,47 @@
 {
-    "env": {
-        "browser": true,
-        "es2021": true,
-        "node": true
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": ["plugin:react/recommended", "airbnb", "plugin:jsx-a11y/recommended", "prettier"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
     },
-    "extends": [
-        "plugin:react/recommended",
-        "airbnb"
-    ],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": 12,
-        "sourceType": "module"
-    },
-    "plugins": [
-        "react",
-        "@typescript-eslint",
-        "prettier"
-    ],
-    "settings": {
-        "import/resolver": {
-            "typescript": {} // this loads <rootdir>/tsconfig.json to eslint
-        }
-    },
-    "rules": {
-        // "import/no-unresolved": "off",
-        "func-names": "off",
-        "object-curly-newline": "off",
-        "no-undef": "off",
-        "linebreak-style": "off",
-        "quotes": "off",
-        "react/react-in-jsx-scope": "off",
-        "react/jsx-filename-extension": [
-            1,
-            {
-                "extensions": [
-                    ".js",
-                    ".jsx",
-                    ".ts",
-                    ".tsx"
-                ]
-            }
-        ]
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "@typescript-eslint", "prettier"],
+  "settings": {
+    "import/resolver": {
+      "typescript": {} // this loads <rootdir>/tsconfig.json to eslint
     }
+  },
+  "rules": {
+    // "import/no-unresolved": "off",
+    "import/extensions": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true
+      }
+    ],
+    "comma-dangle": "off",
+    "func-names": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "linebreak-style": "off",
+    "no-console": "off",
+    "no-undef": "off",
+    "object-curly-newline": "off",
+    "quotes": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    ]
+  }
 }
