@@ -1,9 +1,31 @@
-import { NextPage } from "next";
+import Head from "next/head";
+import Image from "next/image";
+//
+import TypedText from "components/shared/TypedText";
 
-const Home: NextPage = () => (
-  <div>
-    <h1>Welcome to my Resources Manager App</h1>
-  </div>
+// TODO: Add a catchy background song on full page load
+const Home = () => (
+  <>
+    <Head>
+      <link rel="icon" href="/favicon.ico" />
+      <title>Home</title>
+    </Head>
+    <div className="h-full font-body filter drop-shadow-md">
+      <div className="h-full flex flex-row-reverse justify-evenly">
+        <div className="relative flex-1">
+          <Image
+            className="object-contain object-bottom"
+            src="/images/programmer-animate.svg"
+            alt="Picture of the author"
+            layout="fill"
+          />
+        </div>
+        <div className="relative flex-1 flex flex-col">
+          <TypedText />
+        </div>
+      </div>
+    </div>
+  </>
 );
 
 export default Home;
