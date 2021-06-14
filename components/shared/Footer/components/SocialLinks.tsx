@@ -1,35 +1,45 @@
 import PropTypes from "prop-types";
+import { FunctionComponent } from "react";
+import classnames from "classnames";
 
-type SocialProps = {
-  brandName: string;
-  brandUrl?: string;
-};
+interface SocialProps {
+	brandName: string;
+	brandUrl?: string;
+}
 
-const SocialIcon: React.FunctionComponent<SocialProps> = ({ brandName, brandUrl = "" }) => (
-  <a className={`overflow-hidden rounded-full --animate ${brandName}`} href={brandUrl} target="_blank" rel="noreferrer">
-    <span className="--animate-reverse block h-12 w-12 rounded-full border border-gray-300 dark:border-gray-700 p-3">
-      <div className={`block w-full h-full bg-contain bg-center bg-${brandName}`} />
-    </span>
-  </a>
+const SocialIcon: FunctionComponent<SocialProps> = ({ brandName, brandUrl = "" }) => (
+	<a className={`overflow-hidden rounded-full --animate ${brandName}`} href={brandUrl} target="_blank" rel="noreferrer">
+		<span className="--animate-reverse block h-12 w-12 rounded-full border border-gray-300 dark:border-gray-700 p-3">
+			<div className={`block w-full h-full bg-contain bg-center bg-${brandName}`} />
+		</span>
+	</a>
 );
 
 SocialIcon.propTypes = {
-  brandName: PropTypes.string.isRequired,
-  brandUrl: PropTypes.string,
+	brandName: PropTypes.string.isRequired,
+	brandUrl: PropTypes.string,
 };
 
 SocialIcon.defaultProps = {
-  brandUrl: "",
+	brandUrl: "",
 };
 
-const SocialLinks: React.FunctionComponent = () => (
-  <div className="filter drop-shadow-lg space-x-3 flex flex-row">
-    <SocialIcon brandName="facebook" brandUrl="https://www.facebook.com" />
-    <SocialIcon brandName="twitter" brandUrl="https://www.twitter.com" />
-    <SocialIcon brandName="linkedin" brandUrl="https://www.linkedin.com" />
-    <SocialIcon brandName="github" brandUrl="https://www.github.com" />
-    <SocialIcon brandName="whatsapp" brandUrl="https://www.whatsapp.com" />
-  </div>
+const SocialLinks: FunctionComponent<{ className?: string }> = ({ className }) => (
+	<div className={classnames(className, "filter drop-shadow-lg space-x-3 flex flex-row")}>
+		<SocialIcon brandName="facebook" brandUrl="https://www.facebook.com" />
+		<SocialIcon brandName="twitter" brandUrl="https://www.twitter.com" />
+		<SocialIcon brandName="linkedin" brandUrl="https://www.linkedin.com" />
+		<SocialIcon brandName="github" brandUrl="https://www.github.com" />
+		<SocialIcon brandName="whatsapp" brandUrl="https://www.whatsapp.com" />
+	</div>
 );
 
 export default SocialLinks;
+
+SocialLinks.propTypes = {
+	className: PropTypes.string,
+};
+
+SocialLinks.defaultProps = {
+	className: "",
+};
