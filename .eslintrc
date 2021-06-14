@@ -1,47 +1,75 @@
 {
-  "env": {
-    "browser": true,
-    "es2021": true,
-    "node": true
-  },
-  "extends": ["plugin:react/recommended", "airbnb", "plugin:jsx-a11y/recommended", "prettier"],
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
-    },
-    "ecmaVersion": 12,
-    "sourceType": "module"
-  },
-  "plugins": ["react", "@typescript-eslint", "prettier"],
-  "settings": {
-    "import/resolver": {
-      "typescript": {} // this loads <rootdir>/tsconfig.json to eslint
-    }
-  },
-  "rules": {
-    // "import/no-unresolved": "off",
-    "import/extensions": "off",
-    "import/no-extraneous-dependencies": [
-      "error",
-      {
-        "devDependencies": true
-      }
-    ],
-    "comma-dangle": "off",
-    "func-names": "off",
-    "jsx-a11y/anchor-is-valid": "off",
-    "linebreak-style": "off",
-    "no-console": "off",
-    "no-undef": "off",
-    "object-curly-newline": "off",
-    "quotes": "off",
-    "react/react-in-jsx-scope": "off",
-    "react/jsx-filename-extension": [
-      1,
-      {
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
-      }
-    ]
-  }
+	"env": {
+		"browser": true,
+		"es2021": true,
+		"node": true
+	},
+	"extends": [
+		"plugin:react/recommended",
+		"airbnb",
+		"airbnb/hooks",
+		"plugin:import/errors",
+		"plugin:import/warnings",
+		"plugin:import/typescript",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:@typescript-eslint/recommended-requiring-type-checking",
+		"prettier"
+	],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": 12,
+		"project": "./tsconfig.json",
+		"sourceType": "module"
+	},
+	"plugins": [
+		"@typescript-eslint",
+		"import",
+		"jsx-a11y",
+		"prefer-arrow",
+		"react",
+		"react-hooks"
+	],
+	"root": true,
+	"rules": {
+		"no-console": "off",
+		"jsx-a11y/anchor-is-valid": "off",
+		"anchor-is-valid": "off",
+		"react/jsx-props-no-spreading": "off",
+		"react/react-in-jsx-scope": "off",
+		"import/no-extraneous-dependencies": [
+			"error",
+			{
+				"devDependencies": true
+			}
+		],
+		"import/extensions": [
+			"error",
+			"ignorePackages",
+			{
+				"js": "never",
+				"jsx": "never",
+				"ts": "never",
+				"tsx": "never"
+			}
+		],
+		"react/jsx-filename-extension": [
+			1,
+			{
+				"extensions": [
+					".jsx",
+					".tsx",
+					".js",
+					".ts"
+				]
+			}
+		]
+	},
+	"settings": {
+		"import/resolver": {
+			"typescript": {}
+		}
+	}
 }

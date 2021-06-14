@@ -1,1 +1,6 @@
-node_module
+public/
+**/node_modules/*
+**/out/*
+**/.next/*
+*.config.js
+.history
