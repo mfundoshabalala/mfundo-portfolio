@@ -1,3 +1,5 @@
-const AuthForm = () => <div>Auth Form</div>;
+import { FunctionComponent } from "react";
+
+const AuthForm: FunctionComponent = () => <div>Auth Form</div>;
 
 export default AuthForm;
