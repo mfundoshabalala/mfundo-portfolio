@@ -1,15 +1,23 @@
 import Head from "next/head";
+import { FunctionComponent } from "react";
+// components
+import BannerLayout from "components/layout/BannerLayout";
 
-const Blog = () => (
-  <>
-    <Head>
-      <title>Blog</title>
-      <link rel="icon" href="/favicon.ico" />
-    </Head>
-    <div className="flex items-center h-full">
-      <h1 className="text-center text-8xl w-full">Blog page</h1>
-    </div>
-  </>
+const Blog: FunctionComponent = () => (
+	<>
+		<Head>
+			<title>Blog Posts</title>
+			<link rel="icon" href="/favicon.ico" />
+		</Head>
+		<BannerLayout
+			summary="This is the place where I share my experiences and expertise. Enjoy."
+			color="text-gray-50"
+			bgColor="bg-green-500"
+			title="Blog Posts"
+		>
+			<p>Blog posts</p>
+		</BannerLayout>
+	</>
 );
 
 export default Blog;
