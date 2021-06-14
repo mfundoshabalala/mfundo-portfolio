@@ -1,71 +1,64 @@
-import axios from "axios";
-import * as _ from "lodash";
-import Link from "next/link";
+// import _ from "lodash";
 import Head from "next/head";
 import { NextPage } from "next";
 import { useRouter } from "next/router";
-// import PropTypes from "prop-types";
+// components
+import BannerLayout from "components/layout/BannerLayout";
 
-interface IProject {
-  id: number;
-  title: string;
-  summary: string;
+interface Props {
+	portfolio: IProject[];
 }
 
-interface IPortfolio {
-  portfolio: IProject[];
-}
+const Portfolio: NextPage<Props> = () => {
+	const router = useRouter();
 
-// eslint-disable-next-line react/prop-types
-const Portfolio: NextPage<IPortfolio> = ({ portfolio }) => {
-  const router = useRouter();
+	if (router.isFallback) {
+		return <div>Loading...</div>;
+	}
 
-  // If the page is not yet generated, this will be displayed
-  // initially until getStaticProps() finishes running
-  if (router.isFallback) {
-    return <div>Loading...</div>;
-  }
-
-  return (
-    <>
-      <Head>
-        <title>Portfolio</title>
-      </Head>
-      <div className="h-full w-full flex flex-col space-y-6">
-        <div className="bg-passion bg-clip-padding bg-center bg-cover pb-4 h-3/5 flex justify-center items-center">
-          <h1 className="text-5xl font-body font-black uppercase text-center">This is my portfolio page</h1>
-        </div>
-        <ul className="flex flex-row flex-wrap">
-          {_.map(portfolio, project => (
-            <li key={project.id}>
-              <Link href={`/portfolio/${project.id}`}>
-                <a>
-                  <img src="https://dummyimage.com/50.png" alt="" />
-                  <h1>{project.title}</h1>
-                  <p>{project.summary}</p>
-                </a>
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </>
-  );
+	return (
+		<>
+			<Head>
+				<title>Portfolio</title>
+			</Head>
+			<BannerLayout
+				summary="Showcasing my careful curated projects that I hope you will enjoy."
+				quote="Find out what you like doing best and get someone to pay you for doing it. —Katherine Whitehorn"
+				title="Portfolio Page"
+				bgColor="bg-teal-500"
+				color="text-gray-50"
+			>
+				<ul className="flex flex-row flex-wrap bg-blue-500 ">
+					{/* {_.map(portfolio, project => (
+						<li key={project.id}>
+							<Link href={`/portfolio/${project.id}`}>
+								<a>
+									<img src="https://dummyimage.com/50.png" alt="" />
+									<h1>{project.title}</h1>
+									<p>{project.summary}</p>
+								</a>
+							</Link>
+						</li>
+					))} */}
+				</ul>
+			</BannerLayout>
+		</>
+	);
 };
 
 export default Portfolio;
 
-export const getStaticProps = async () => {
-  let portfolio = [];
+// export const getStaticProps: GetStaticProps = async () => {
+// 	let portfolio = [];
 
-  try {
-    const res = await axios(`${process.env.PORTFOLIO_API}`);
-    portfolio = await res.data;
-  } catch (error) {
-    console.error(error);
-  }
+// 	try {
+// 		const res = await axios(`${process.env.PORTFOLIO_API}`);
+// 		portfolio = await res.data;
+// 	} catch (error) {
+// 		console.error(error);
+// 	}
 
-  return { props: { portfolio }, revalidate: 1 };
-};
+// 	return { props: { portfolio }, revalidate: 1 };
+// };
 
-Portfolio.propTypes = {};
+// Portfolio.propTypes = {};
