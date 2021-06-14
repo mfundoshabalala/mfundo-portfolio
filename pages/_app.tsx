@@ -7,16 +7,16 @@ import BasicLayout from "components/layout/BasicLayout";
 // global app styles + tailwindcss default styles
 import "styles/base.css";
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return (
-    <UserProvider>
-      <ThemeProvider attribute="class">
-        <BasicLayout>
-          <Component {...pageProps} />
-        </BasicLayout>
-      </ThemeProvider>
-    </UserProvider>
-  );
+function MyApp({ Component, pageProps }: AppProps): JSX.Element {
+	return (
+		<UserProvider>
+			<ThemeProvider attribute="class">
+				<BasicLayout>
+					<Component {...pageProps} />
+				</BasicLayout>
+			</ThemeProvider>
+		</UserProvider>
+	);
 }
 
 export default MyApp;
