@@ -4,18 +4,19 @@ import PropTypes from "prop-types";
 import Header from "components/shared/Header";
 import Footer from "components/shared/Footer";
 // page props interface(s)
-import { ChildrenProps } from "shared/interfaces";
+// import BackgroundAnimatedIcon from "components/shared/BackgroundAnimationIcon";
 
-const BasicLayout: NextPage<ChildrenProps> = ({ children }) => (
-  <div className="h-full flex flex-col">
-    <Header />
-    <main className="flex-1">{children}</main>
-    <Footer />
-  </div>
+const BasicLayout: NextPage<IBasicLayout> = ({ children }) => (
+	<div className="h-full flex flex-col relative">
+		<Header />
+		<main className="flex-1">{children}</main>
+		<Footer />
+		{/* <BackgroundAnimatedIcon   /> */}
+	</div>
 );
 
 export default BasicLayout;
 
 BasicLayout.propTypes = {
-  children: PropTypes.node.isRequired,
+	children: PropTypes.node.isRequired,
 };
