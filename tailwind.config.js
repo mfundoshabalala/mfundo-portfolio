@@ -39,15 +39,13 @@ module.exports = {
 				lato: ["Lato"],
 			},
 			backgroundImage: {
-				pattern: `url("/images/webb.png")`,
 				facebook: `url("/images/facebook.svg")`,
 				linkedin: `url("/images/linkedin.svg")`,
 				twitter: `url("/images/twitter.svg")`,
 				whatsapp: `url("/images/whatsapp.svg")`,
 				github: `url("/images/github.svg")`,
 				image: `url("/images/background-image.png")`,
-				design: `url("/images/design-unsplash.jpg")`,
-				passion: `url("/images/passion-unsplash.jpg")`,
+				wave: `url("/images/wave.svg")`,
 			},
 			boxShadow: {
 				custom: "inset 0 8px 8px -8px rgb(0 0 0 / 30%), inset 0 -8px 8px -8px rgb(0 0 0 / 30%)",
