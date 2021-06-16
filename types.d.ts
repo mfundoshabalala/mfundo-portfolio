@@ -19,3 +19,13 @@ interface IProject {
 	title: string;
 	summary: string;
 }
+
+interface ITitledComponent {
+	className?: string;
+	title?: string;
+}
+
+interface IAddTitle {
+	title?: string;
+	children: React.ReactNode;
+}

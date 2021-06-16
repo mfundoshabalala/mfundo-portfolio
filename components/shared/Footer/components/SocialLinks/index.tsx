@@ -1,6 +1,8 @@
 import PropTypes from "prop-types";
 import { FunctionComponent } from "react";
 import classnames from "classnames";
+// component(s)
+import AddTitleComponent from "../AddTitleComponent";
 
 interface SocialProps {
 	brandName: string;
@@ -24,22 +26,26 @@ SocialIcon.defaultProps = {
 	brandUrl: "",
 };
 
-const SocialLinks: FunctionComponent<{ className?: string }> = ({ className }) => (
-	<div className={classnames(className, "filter drop-shadow-lg space-x-3 flex flex-row")}>
-		<SocialIcon brandName="facebook" brandUrl="https://www.facebook.com" />
-		<SocialIcon brandName="twitter" brandUrl="https://www.twitter.com" />
-		<SocialIcon brandName="linkedin" brandUrl="https://www.linkedin.com" />
-		<SocialIcon brandName="github" brandUrl="https://www.github.com" />
-		<SocialIcon brandName="whatsapp" brandUrl="https://www.whatsapp.com" />
-	</div>
+const SocialLinks: FunctionComponent<ITitledComponent> = ({ className, title }) => (
+	<AddTitleComponent title={title}>
+		<div className={classnames(className, "filter drop-shadow-lg space-x-3 flex flex-row")}>
+			<SocialIcon brandName="facebook" brandUrl="https://www.facebook.com" />
+			<SocialIcon brandName="twitter" brandUrl="https://www.twitter.com" />
+			<SocialIcon brandName="linkedin" brandUrl="https://www.linkedin.com" />
+			<SocialIcon brandName="github" brandUrl="https://www.github.com" />
+			<SocialIcon brandName="whatsapp" brandUrl="https://www.whatsapp.com" />
+		</div>
+	</AddTitleComponent>
 );
 
 export default SocialLinks;
 
 SocialLinks.propTypes = {
+	title: PropTypes.string,
 	className: PropTypes.string,
 };
 
 SocialLinks.defaultProps = {
+	title: "",
 	className: "",
 };
