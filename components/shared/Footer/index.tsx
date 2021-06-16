@@ -1,16 +1,12 @@
 import { FunctionComponent } from "react";
 // components
 // NOTE: Maybe move the social sites to the side of each page and fix
-import Copyright from "./components/Copyright";
-import SocialLinks from "./components/SocialLinks";
 import Attributions from "./components/Attributions";
+import BackgroundWave from "./components/BackgroundWave";
+import Copyright from "./components/Copyright";
 import Newsletter from "./components/Newsletter";
+import SocialLinks from "./components/SocialLinks";
 
-export const BackgroundWave: FunctionComponent = () => (
-	<>
-		<div className="w-full h-1/3 bg-wave bg-no-repeat bg-cover bg-center z-0 absolute bottom-0 left-0" />
-	</>
-);
 
 // TODO: Rethink the design of the footer.
 const Footer: FunctionComponent = () => (
