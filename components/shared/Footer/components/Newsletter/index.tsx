@@ -9,7 +9,7 @@ const Newsletter: FunctionComponent<ITitledComponent> = ({ className, title }) =
 	return (
 		<>
 			<AddTitleComponent title={title}>
-				<form className="w-4/5 flex flex-row flex-wrap justify-center items-center space-x-2">
+				<form className="w-4/5 flex flex-row flex-nowrap justify-center items-center space-x-2">
 					<input
 						type="text"
 						className={classnames(className, "flex-1 py-2 px-4 border border-solid border-gray-300 shadow rounded")}
@@ -17,7 +17,7 @@ const Newsletter: FunctionComponent<ITitledComponent> = ({ className, title }) =
 					/>
 					<button
 						type="submit"
-						className="py-2 px-4 border border-solid shadow rounded bg-indigo-500 hover:bg-indigo-700 text-md text-shadow text-gray-50"
+						className="py-2 px-4 border border-solid border-indigo-700 shadow rounded bg-indigo-500 hover:bg-indigo-700 text-md text-shadow text-gray-50"
 					>
 						Subscribe
 					</button>
