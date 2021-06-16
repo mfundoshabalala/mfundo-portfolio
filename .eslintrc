@@ -24,14 +24,7 @@
 		"project": "./tsconfig.json",
 		"sourceType": "module"
 	},
-	"plugins": [
-		"@typescript-eslint",
-		"import",
-		"jsx-a11y",
-		"prefer-arrow",
-		"react",
-		"react-hooks"
-	],
+	"plugins": ["@typescript-eslint", "import", "jsx-a11y", "prefer-arrow", "react", "react-hooks"],
 	"root": true,
 	"rules": {
 		"no-console": "off",
@@ -58,12 +51,7 @@
 		"react/jsx-filename-extension": [
 			1,
 			{
-				"extensions": [
-					".jsx",
-					".tsx",
-					".js",
-					".ts"
-				]
+				"extensions": [".jsx", ".tsx", ".js", ".ts"]
 			}
 		]
 	},
