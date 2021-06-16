@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
-import { FunctionComponent } from "react";
 import classnames from "classnames";
+import { FunctionComponent } from "react";
 // component(s)
 import AddTitleComponent from "../AddTitleComponent";
 
@@ -10,8 +10,13 @@ interface SocialProps {
 }
 
 const SocialIcon: FunctionComponent<SocialProps> = ({ brandName, brandUrl = "" }) => (
-	<a className={`overflow-hidden rounded-full --animate ${brandName}`} href={brandUrl} target="_blank" rel="noreferrer">
-		<span className="--animate-reverse block h-12 w-12 rounded-full border border-gray-300 dark:border-gray-700 p-3">
+	<a
+		className={`bg-gray-100 bg-clip-content overflow-hidden rounded-full --animate ${brandName}`}
+		href={brandUrl}
+		target="_blank"
+		rel="noreferrer"
+	>
+		<span className="--animate-reverse block h-12 w-12 p-3 rounded-full border border-gray-300">
 			<div className={`block w-full h-full bg-contain bg-center bg-${brandName}`} />
 		</span>
 	</a>
