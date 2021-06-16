@@ -5,11 +5,11 @@ import { useRouter } from "next/router";
 // components
 import BannerLayout from "components/layout/BannerLayout";
 
-interface Props {
-	portfolio: IProject[];
-}
+// interface Props {
+// 	portfolio: IProject[];
+// }
 
-const Portfolio: NextPage<Props> = () => {
+const Portfolio: NextPage = () => {
 	const router = useRouter();
 
 	if (router.isFallback) {
