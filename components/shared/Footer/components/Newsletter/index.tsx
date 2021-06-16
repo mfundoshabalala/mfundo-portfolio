@@ -17,7 +17,7 @@ const Newsletter: FunctionComponent<ITitledComponent> = ({ className, title }) =
 					/>
 					<button
 						type="submit"
-						className="py-2 px-4 shadow rounded bg-indigo-500 hover:bg-indigo-700 text-md text-shadow text-gray-50"
+						className="btn btn-primary"
 					>
 						Subscribe
 					</button>

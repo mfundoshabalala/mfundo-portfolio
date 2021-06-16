@@ -73,10 +73,7 @@ const Contact: NextPage = () => {
 									<option value="">Complements</option>
 								</select>
 								<div className="flex-1 px-4 flex flex-row justify-center items-center">
-									<button
-										className="w-full py-2 px-4 shadow text-gray-50 text-md text-shadow bg-indigo-500 hover:bg-indigo-700"
-										type="submit"
-									>
+									<button className="w-full btn btn-primary" type="submit">
 										Contact Me
 									</button>
 								</div>
