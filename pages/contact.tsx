@@ -17,28 +17,6 @@ const Contact: NextPage = () => {
 				color="text-gray-50"
 			>
 				<section className="container mx-auto px-10 space-x-5 flex flex-row-reverse flex-wrap justify-center items-center text-gray-600">
-					{/* {/* <div className="flex-1">
-						<div className="flex flex-row items-center">
-							<ul className="space-y-5">
-								<li className="">
-									<a href="mailto:mfundoshabalala@gmail.com">mfundoshabalala@gmail.com</a>
-								</li>
-								<li className="">
-									<a href="tel:+27604843666">+27604843666</a>
-								</li>
-								<li className="">
-									<a href="">
-										<address className="flex flex-col">
-											<span>Palmsprings, 2 Wemyss</span>
-											<span>Brooklyn, Cape Town</span>
-											<span>7405</span>
-										</address>
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div> */}
-
 					<div className="w-1/2 flex flex-col justify-center space-y-6">
 						<h3 className="uppercase font-body tracking-tight text-shadow text-center text-gray-600 text-4xl font-black">
 							Get in touch with me

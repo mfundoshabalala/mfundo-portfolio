@@ -11,7 +11,7 @@ const Home: NextPage = () => (
 			<link rel="icon" href="/favicon.ico" />
 			<title>Home</title>
 		</Head>
-		<div className="h-full font-body filter drop-shadow-md">
+		<div className="container mx-auto h-full font-body filter drop-shadow-md">
 			<div className="h-full flex flex-row-reverse justify-evenly">
 				<div className="relative flex-1">
 					<Image
