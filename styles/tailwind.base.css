@@ -95,7 +95,7 @@ q {
 
 @layer components {
   .btn {
-    @apply rounded px-6 py-2 shadow text-shadow;
+    @apply rounded px-6 py-2 shadow text-shadow font-medium;
   }
 
   .btn-primary {
