@@ -5,7 +5,7 @@ const TypedText: FunctionComponent = () => (
 	<div className="flex-1 text-center space-y-8 flex flex-col justify-center items-center">
 		<h2 className="text-3xl font-black uppercase whitespace-nowrap">
 			<p className="">Welcome to the portfolio website of</p>
-			<p className="text-purple-600 dark:text-indigo-500">
+			<p className="text-purple-600">
 				<Typed strings={["Mfundo Bright Shabalala"]} typeSpeed={80} backSpeed={50} backDelay={50000} loop />
 			</p>
 		</h2>
