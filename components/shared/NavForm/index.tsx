@@ -6,7 +6,7 @@ import ToggleTheme from "../ToggleTheme";
 const NavForm: FunctionComponent = () => (
 	<form className="space-x-4 leading-9 flex flex-row items-center">
 		<AuthButton />
-		<ToggleTheme />
+		{/* <ToggleTheme /> */}
 	</form>
 );
 
