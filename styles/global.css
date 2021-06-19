@@ -1,0 +1,127 @@
+/* fonts imports */
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+/* purgecss start ignore */
+@tailwind base;
+@tailwind components;
+/* purgecss end ignore */
+@tailwind utilities;
+
+@layer components {
+	.text-shadow {
+		text-shadow: 0 1px 3px rgb(0 0 0 / 30%);
+	}
+
+	.btn {
+		@apply rounded px-6 py-2 shadow text-shadow font-medium;
+	}
+
+	.btn-primary {
+		@apply bg-gradient-to-br from-blue-500 hover:from-indigo-600 via-blue-600 hover:via-indigo-800 to-blue-800 hover:to-indigo-900 text-gray-200;
+	}
+}
+
+html,
+body {
+	height: 100vh;
+	padding: 0;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+		Helvetica Neue, sans-serif;
+}
+
+::-webkit-scrollbar {
+	width: 1.25rem;
+}
+
+::-webkit-scrollbar-track {
+	/* box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */
+	/* background-color: rgba(0, 0, 0, 0.23); */
+	border-radius: 99999px;
+}
+
+::-webkit-scrollbar-thumb {
+	background-clip: padding-box;
+	border: 4px solid rgba(0, 0, 0, 0);
+	border-radius: 99999px;
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.1, rgb(28, 58, 148)),
+		color-stop(0.6, rgb(73, 125, 189)),
+		color-stop(0.95, rgb(28, 58, 148))
+	);
+}
+
+#__next {
+	height: 100%;
+}
+
+q {
+	quotes: "“" "”";
+}
+
+.--active {
+	background-color: red;
+}
+
+.facebook:hover {
+	border-bottom-color: #3b5998;
+}
+
+.twitter:hover {
+	border-bottom-color: #1da1f2;
+}
+
+.linkedin:hover {
+	border-bottom-color: #0a66c2;
+}
+
+.whatsapp:hover {
+	border-bottom-color: #25d366;
+}
+
+.github:hover {
+	border-bottom-color: #171515;
+}
+
+.dark .github:hover {
+	border-bottom-color: #f2f2f2;
+}
+
+.--animate {
+	border: 2px solid transparent;
+}
+
+.--animate:hover {
+	animation-name: rotation-animation;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+.--animate:hover .--animate-reverse {
+	animation-name: rotation-animation-reverse;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes rotation-animation {
+	from {
+		transform: rotate(-360deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes rotation-animation-reverse {
+	from {
+		transform: rotate(360deg);
+	}
+	to {
+		transform: rotate(-360deg);
+	}
+}
