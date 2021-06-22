@@ -1,10 +1,10 @@
-import { NextPage } from "next";
+import { NextPage } from 'next';
 
 const ProjectToDelete: NextPage = () => (
-		<div>
-			<h1>Test to fix</h1>
-		</div>
-	);
+	<div>
+		<h1>Test to fix</h1>
+	</div>
+);
 
 export default ProjectToDelete;
 

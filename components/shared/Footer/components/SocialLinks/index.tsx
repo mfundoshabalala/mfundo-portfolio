@@ -1,23 +1,21 @@
-import PropTypes from "prop-types";
-import classnames from "classnames";
-import { FunctionComponent } from "react";
+import PropTypes from 'prop-types';
+import classnames from 'classnames';
+import { FunctionComponent } from 'react';
 // component(s)
-import AddTitleComponent from "../AddTitleComponent";
+import AddTitleComponent from '../AddTitleComponent';
 
-interface SocialProps {
-	brandName: string;
-	brandUrl?: string;
-}
-
-const SocialIcon: FunctionComponent<SocialProps> = ({ brandName, brandUrl = "" }) => (
+const SocialIcon: FunctionComponent<ISocialIcon> = ({ brandName, brandUrl = '' }) => (
 	<a
 		className={`bg-gray-100 bg-clip-content overflow-hidden rounded-full --animate ${brandName}`}
 		href={brandUrl}
 		target="_blank"
 		rel="noreferrer"
 	>
-		<span className="--animate-reverse block h-12 w-12 p-3 rounded-full border border-gray-300">
-			<div className={`block w-full h-full bg-contain bg-center bg-${brandName}`} />
+		<span className="block w-12 h-12 p-3 border border-gray-300 rounded-full --animate-reverse">
+			<div
+				className="block w-full h-full bg-center bg-contain"
+				style={{ backgroundImage: `url(/images/${brandName}.svg)` }}
+			/>
 		</span>
 	</a>
 );
@@ -28,12 +26,12 @@ SocialIcon.propTypes = {
 };
 
 SocialIcon.defaultProps = {
-	brandUrl: "",
+	brandUrl: '',
 };
 
 const SocialLinks: FunctionComponent<ITitledComponent> = ({ className, title }) => (
 	<AddTitleComponent title={title}>
-		<div className={classnames(className, "filter drop-shadow-lg space-x-3 flex flex-row")}>
+		<div className={classnames(className, 'filter drop-shadow-lg space-x-3 flex flex-row')}>
 			<SocialIcon brandName="facebook" brandUrl="https://www.facebook.com" />
 			<SocialIcon brandName="twitter" brandUrl="https://www.twitter.com" />
 			<SocialIcon brandName="linkedin" brandUrl="https://www.linkedin.com" />
@@ -51,6 +49,6 @@ SocialLinks.propTypes = {
 };
 
 SocialLinks.defaultProps = {
-	title: "",
-	className: "",
+	title: '',
+	className: '',
 };

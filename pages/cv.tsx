@@ -1,8 +1,9 @@
-import Head from "next/head";
+import Head from 'next/head';
+import { NextPage } from 'next';
 // components
-import BannerLayout from "components/layout/BannerLayout";
+import BannerLayout from 'components/layout/BannerLayout';
 
-const CV: React.FunctionComponent = () => (
+const CV: NextPage = () => (
 	<>
 		<Head>
 			<title>Curriculum Vitae</title>
@@ -10,7 +11,7 @@ const CV: React.FunctionComponent = () => (
 		<BannerLayout
 			summary="For security reasons, you have request access to this file by filling the form below."
 			title="Curriculum Vitae"
-			bgColor="bg-orange-600"
+			bgColor="bg-red-600/90"
 			color="text-gray-50"
 		>
 			<p>Request access</p>

@@ -1,5 +1,5 @@
-import Link from "next/link";
-import { FunctionComponent } from "react";
+import Link from 'next/link';
+import { FunctionComponent } from 'react';
 
 const BrandLogo: FunctionComponent = () => (
 	<div className="font-black text-5xl px-1 py-2">

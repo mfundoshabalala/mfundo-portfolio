@@ -1,7 +1,7 @@
-import { FunctionComponent } from "react";
-import PropTypes from "prop-types";
+import { FunctionComponent } from 'react';
+import PropTypes from 'prop-types';
 // component(s)
-import AddTitleComponent from "../AddTitleComponent";
+import AddTitleComponent from '../AddTitleComponent';
 
 const Attributions: FunctionComponent<ITitledComponent> = ({ className, title }) => (
 	<>
@@ -21,6 +21,6 @@ Attributions.propTypes = {
 };
 
 Attributions.defaultProps = {
-	title: "",
-	className: "",
+	title: '',
+	className: '',
 };

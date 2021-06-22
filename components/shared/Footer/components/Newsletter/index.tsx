@@ -1,24 +1,21 @@
 /* eslint-disable arrow-body-style */
-import { FunctionComponent } from "react";
-import PropTypes from "prop-types";
-import classnames from "classnames";
+import { FunctionComponent } from 'react';
+import PropTypes from 'prop-types';
+import classnames from 'classnames';
 //
-import AddTitleComponent from "../AddTitleComponent";
+import AddTitleComponent from '../AddTitleComponent';
 
 const Newsletter: FunctionComponent<ITitledComponent> = ({ className, title }) => {
 	return (
 		<>
 			<AddTitleComponent title={title}>
-				<form className="w-4/5 flex flex-row flex-nowrap justify-center items-center space-x-2">
+				<form className="flex flex-row items-center justify-center w-3/5 space-x-2 flex-nowrap">
 					<input
 						type="text"
-						className={classnames(className, "flex-1 py-2 px-4 border border-solid border-gray-300 shadow rounded")}
+						className={classnames(className, 'flex-1 py-2 px-4 border border-solid border-gray-300 shadow rounded')}
 						placeholder="Please enter your email"
 					/>
-					<button
-						type="submit"
-						className="btn btn-primary"
-					>
+					<button type="submit" className="btn btn-primary">
 						Subscribe
 					</button>
 				</form>
@@ -35,6 +32,6 @@ Newsletter.propTypes = {
 };
 
 Newsletter.defaultProps = {
-	title: "",
-	className: "",
+	title: '',
+	className: '',
 };

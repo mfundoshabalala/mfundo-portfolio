@@ -1,5 +1,5 @@
-import { FunctionComponent } from "react";
-import PropTypes from "prop-types";
+import { FunctionComponent } from 'react';
+import PropTypes from 'prop-types';
 
 const AddTitleComponent: FunctionComponent<IAddTitle> = ({ children, title }) => (
 	<>
@@ -18,5 +18,5 @@ AddTitleComponent.propTypes = {
 };
 
 AddTitleComponent.defaultProps = {
-	title: "",
+	title: '',
 };

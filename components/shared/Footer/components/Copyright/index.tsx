@@ -1,8 +1,8 @@
-import { FunctionComponent } from "react";
-import classnames from "classnames";
-import PropTypes from "prop-types";
+import { FunctionComponent } from 'react';
+import classnames from 'classnames';
+import PropTypes from 'prop-types';
 // component(s)
-import AddTitleComponent from "../AddTitleComponent";
+import AddTitleComponent from '../AddTitleComponent';
 
 interface ICopyright extends ITitledComponent {
 	author?: string;
@@ -11,7 +11,7 @@ interface ICopyright extends ITitledComponent {
 const Copyright: FunctionComponent<ICopyright> = ({ className, author, title }) => (
 	<>
 		<AddTitleComponent title={title}>
-			<div className={classnames(className, "italic")}>
+			<div className={classnames(className, 'italic')}>
 				&copy; Copyrights Reserved by <span className="hover:underline">{author}</span>
 			</div>
 		</AddTitleComponent>
@@ -27,7 +27,7 @@ Copyright.propTypes = {
 };
 
 Copyright.defaultProps = {
-	className: "",
-	title: "",
-	author: "",
+	className: '',
+	title: '',
+	author: '',
 };

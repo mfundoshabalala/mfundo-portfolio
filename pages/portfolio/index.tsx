@@ -1,9 +1,9 @@
 // import _ from "lodash";
-import Head from "next/head";
-import { NextPage } from "next";
-import { useRouter } from "next/router";
+import Head from 'next/head';
+import { NextPage } from 'next';
+import { useRouter } from 'next/router';
 // components
-import BannerLayout from "components/layout/BannerLayout";
+import BannerLayout from 'components/layout/BannerLayout';
 
 // interface Props {
 // 	portfolio: IProject[];
@@ -25,7 +25,7 @@ const Portfolio: NextPage = () => {
 				summary="Showcasing my careful curated projects that I hope you will enjoy."
 				quote="Find out what you like doing best and get someone to pay you for doing it. —Katherine Whitehorn"
 				title="Portfolio Page"
-				bgColor="bg-teal-500"
+				bgColor="bg-blue-600"
 				color="text-gray-50"
 			>
 				<ul className="flex flex-row flex-wrap bg-blue-500 ">

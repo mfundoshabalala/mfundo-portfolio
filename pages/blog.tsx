@@ -1,7 +1,7 @@
-import Head from "next/head";
-import { FunctionComponent } from "react";
+import Head from 'next/head';
+import { FunctionComponent } from 'react';
 // components
-import BannerLayout from "components/layout/BannerLayout";
+import BannerLayout from 'components/layout/BannerLayout';
 
 const Blog: FunctionComponent = () => (
 	<>
