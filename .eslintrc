@@ -26,12 +26,7 @@
 		"project": "./tsconfig.json",
 		"sourceType": "module"
 	},
-	"plugins": [
-		"@typescript-eslint",
-		"import",
-		"jsx-a11y",
-		"prefer-arrow"
-	],
+	"plugins": ["@typescript-eslint", "import", "jsx-a11y", "prefer-arrow"],
 	"root": true,
 	"rules": {
 		// "no-console": "off",
