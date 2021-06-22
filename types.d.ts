@@ -25,6 +25,11 @@ interface ITitledComponent {
 	title?: string;
 }
 
+interface ISocialIcon {
+	brandName: string;
+	brandUrl?: string;
+}
+
 interface IAddTitle {
 	title?: string;
 	children: React.ReactNode;
