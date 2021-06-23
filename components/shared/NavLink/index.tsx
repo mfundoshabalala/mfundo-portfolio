@@ -1,39 +1,24 @@
-import Link from "next/link";
-import PropTypes from "prop-types";
-import classnames from "classnames";
-import { FunctionComponent } from "react";
+import Link from 'next/link';
+import { FunctionComponent } from 'react';
+import PropTypes from 'prop-types';
 
 interface INavLink {
 	name: string;
 	url: string;
-	bgColor?: string;
 }
 
 // FIXME: Make each link an active link when active
-const NavLink: FunctionComponent<INavLink> = props => {
-	const { name, url, bgColor = "indigo-500" } = props;
-	return (
-		<div
-			className={classnames(
-				`hover:bg-${bgColor}`,
-				"transform -translate-x-5 flex-1 hover:text-white rounded-sm px-3 shadow-sm"
-			)}
-		>
-			<Link href={url}>
-				<a className="block">{name}</a>
-			</Link>
-		</div>
-	);
-};
+const NavLink: FunctionComponent<INavLink> = ({ name, url }) => (
+	<div className="flex-1 px-3 transform -translate-x-5 rounded-sm shadow-sm bg-gradient-to-br hover:btn-primary hover:shadow-xl hover:text-white">
+		<Link href={url}>
+			<a className="block">{name}</a>
+		</Link>
+	</div>
+);
 
 export default NavLink;
 
 NavLink.propTypes = {
 	name: PropTypes.string.isRequired,
 	url: PropTypes.string.isRequired,
-	bgColor: PropTypes.string,
-};
-
-NavLink.defaultProps = {
-	bgColor: "indigo-500",
 };

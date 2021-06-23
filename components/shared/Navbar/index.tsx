@@ -1,10 +1,10 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent } from 'react';
 // components
-import NavLink from "components/shared/NavLink";
+import NavLink from 'components/shared/NavLink';
 
 const Navbar: FunctionComponent = () => (
 	<>
-		<nav className="leading-9 flex-1 flex flex-row justify-center">
+		<nav className="flex flex-row justify-center flex-1 leading-9">
 			<ul className="flex flex-row justify-center space-x-3">
 				<NavLink name="About" url="/about" />
 				<NavLink name="Portfolio" url="/portfolio" />
