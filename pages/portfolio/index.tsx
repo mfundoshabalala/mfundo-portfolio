@@ -5,10 +5,6 @@ import { useRouter } from 'next/router';
 // components
 import BannerLayout from 'components/layout/BannerLayout';
 
-// interface Props {
-// 	portfolio: IProject[];
-// }
-
 const Portfolio: NextPage = () => {
 	const router = useRouter();
 
