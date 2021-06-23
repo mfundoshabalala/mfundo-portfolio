@@ -16,7 +16,7 @@ const Footer: FunctionComponent = () => (
 				<SocialLinks title="Connect with me" />
 			</div>
 			<div className="flex flex-row flex-wrap w-full space-y-2 md:space-y-0 md:space-x-2">
-				<Attributions />
+				<Attributions className="italic" />
 				<Copyright author="Mfundo Shabalala" />
 			</div>
 		</div>
