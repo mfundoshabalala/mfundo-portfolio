@@ -1,15 +1,26 @@
-import { FunctionComponent } from "react";
-import PropTypes from "prop-types";
+import { FunctionComponent } from 'react';
+import { motion } from 'framer-motion';
+import PropTypes from 'prop-types';
 // components
-import Banner from "components/shared/Banner";
+import Banner from 'components/shared/Banner';
 
-const BannerLayout: FunctionComponent<IBannerLayout> = ({ children, color, bgColor, title, summary, quote }) => (
-	<>
-		<div className="min-h-full w-full flex flex-col space-y-6">
-			<Banner color={color} bgColor={bgColor} title={title} summary={summary} quote={quote} />
-			{children}
-		</div>
-	</>
+const bannerVariant = {
+	hidden: { x: '100vw', opacity: 0 },
+	show: { x: 0, opacity: 1, transition: { staggerChildren: 2, type: 'spring', stiffness: 50 } },
+	exit: { x: '-100vw', opacity: 0, transition: { duration: 10 } },
+};
+
+const BannerLayout: FunctionComponent<IBannerLayout> = ({ children, ...rest }) => (
+	<motion.div
+		variants={bannerVariant}
+		initial="hidden"
+		animate="show"
+		exit="exit"
+		className="flex flex-col w-full min-h-full"
+	>
+		<Banner {...rest} />
+		{children}
+	</motion.div>
 );
 
 export default BannerLayout;
@@ -27,9 +38,9 @@ BannerLayout.propTypes = {
 };
 
 BannerLayout.defaultProps = {
-	color: "text-gray-50",
-	bgColor: "bg-blue-600",
-	title: "",
-	summary: "",
+	color: 'text-gray-50',
+	bgColor: 'bg-blue-600',
+	title: '',
+	summary: '',
 	quote: undefined,
 };

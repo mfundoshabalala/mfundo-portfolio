@@ -1,21 +1,17 @@
-import PropTypes from "prop-types";
-import { FunctionComponent } from "react";
+import { FunctionComponent } from 'react';
+import { motion } from 'framer-motion';
+import PropTypes from 'prop-types';
 // page component(s)
-import Header from "components/shared/Header";
-import Footer from "components/shared/Footer";
-
-// export const BackgroundWave: FunctionComponent = () => (
-// 	<>
-// 		<div className="w-full h-1/3 bg-wave bg-no-repeat bg-cover bg-center z-0 absolute bottom-0 left-0" />
-// 	</>
-// );
+import Header from 'components/shared/Header';
+import Footer from 'components/shared/Footer';
 
 const BasicLayout: FunctionComponent<IBasicLayout> = ({ children }) => (
-	<div className="h-full flex flex-col relative text-gray-600 overflow-x-hidden">
+	<div className="relative flex flex-col h-screen overflow-x-hidden text-gray-600">
 		<Header />
-		<main className="flex-1 relative z-10">{children}</main>
+		<motion.main initial="initial" animate="enter" exit="exit" className="relative z-10 flex-1">
+			{children}
+		</motion.main>
 		<Footer />
-		{/* <BackgroundWave /> */}
 	</div>
 );
 
