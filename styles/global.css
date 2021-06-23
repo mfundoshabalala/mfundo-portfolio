@@ -13,11 +13,11 @@
 	}
 
 	.btn {
-		@apply cursor-pointer text-center rounded px-6 py-2 shadow text-shadow font-medium whitespace-nowrap;
+		@apply cursor-pointer text-center rounded px-6 py-2 shadow hover:shadow-md font-sans whitespace-nowrap bg-gradient-to-br hover:from-indigo-500 hover:via-indigo-800 hover:to-indigo-900 hover:text-white;
 	}
 
 	.btn-primary {
-		@apply bg-gradient-to-br from-blue-500 hover:from-indigo-600 via-blue-600 hover:via-indigo-800 to-blue-800 hover:to-indigo-900 text-gray-200;
+		@apply from-blue-400  via-blue-500  to-blue-800  text-gray-100;
 	}
 }
 
