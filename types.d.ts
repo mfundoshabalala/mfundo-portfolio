@@ -34,3 +34,14 @@ interface IAddTitle {
 	title?: string;
 	children: React.ReactNode;
 }
+
+interface Post {
+	id: number;
+	title: string;
+	summary: string;
+	image: string;
+}
+
+interface Posts {
+	posts: Post[];
+}
