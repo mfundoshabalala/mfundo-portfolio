@@ -1,9 +1,8 @@
-import { FunctionComponent } from 'react';
 import PropTypes from 'prop-types';
 // component(s)
 import AddTitleComponent from '../AddTitleComponent';
 
-const Attributions: FunctionComponent<ITitledComponent> = ({ className, title }) => (
+const Attributions: React.FC<ITitledComponent> = ({ className, title }) => (
 	<>
 		<AddTitleComponent title={title}>
 			<div className={className}>

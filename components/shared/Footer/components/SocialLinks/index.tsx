@@ -9,6 +9,7 @@ const SocialIcon: FunctionComponent<ISocialIcon> = ({ brandName, brandUrl = '' }
 		className={`bg-gray-100 bg-clip-content overflow-hidden rounded-full --animate ${brandName}`}
 		href={brandUrl}
 		target="_blank"
+		aria-label={`${brandName} link`}
 		rel="noreferrer"
 	>
 		<span className="block w-12 h-12 p-3 border border-gray-300 rounded-full --animate-reverse">

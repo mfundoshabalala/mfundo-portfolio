@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 
 const AddTitleComponent: FunctionComponent<IAddTitle> = ({ children, title }) => (
 	<>
-		<div className="flex-1 flex flex-col justify-center items-center space-y-4">
-			<h1 className="text-shadow capitalize font-body font-semibold text-xl">{title}</h1>
+		<div className="flex flex-col items-center justify-center flex-1 space-y-2 md:space-y-4">
+			<h1 className="text-xl font-semibold capitalize text-shadow font-body">{title}</h1>
 			<>{children}</>
 		</div>
 	</>
