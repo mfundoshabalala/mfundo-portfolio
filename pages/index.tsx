@@ -2,8 +2,6 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { NextPage } from 'next';
 import { motion } from 'framer-motion';
-// Typed text component
-import TypedText from 'components/shared/TypedText';
 
 const imageVariant = {
 	hidden: { x: 200, opacity: 0, z: -2000 },
@@ -23,8 +21,8 @@ const Home: NextPage = () => (
 			<link rel="icon" href="/favicon.ico" />
 			<title>Home</title>
 		</Head>
-		<div className="container h-full mx-auto font-body filter drop-shadow-md">
-			<div className="flex flex-row-reverse h-full justify-evenly">
+		<div className="container h-full mx-auto font-body">
+			<div className="flex flex-row h-full justify-evenly">
 				<motion.div
 					key="introductionImage"
 					variants={imageVariant}
@@ -42,12 +40,19 @@ const Home: NextPage = () => (
 					exit="exit"
 					className="relative flex flex-col items-center justify-center flex-1 space-y-8"
 				>
-					<TypedText />
+					<div className="space-y-4 text-center">
+						<p className="text-2xl font-black uppercase drop-shadow-xl">
+							Hello, I&apos;m <span className="text-blue-600">Mfundo Bright Shabalala</span>
+						</p>
+						<p className="font-bold leading-tight drop-shadow-sm">
+							I love to code and dream. I tweet about things that I learned being a full stack web developer.
+						</p>
+					</div>
 					<div className="flex flex-row items-center justify-center max-w-lg space-x-8">
 						<Link href="/portfolio" passHref>
 							<motion.a
 								whileHover={{ scale: 1.1 }}
-								transition={{ type: 'spring', stiffness: 500 }}
+								transition={{ type: 'spring', stiffness: 400 }}
 								className="w-full btn"
 								type="button"
 							>
@@ -57,7 +62,7 @@ const Home: NextPage = () => (
 						<Link href="/contact" passHref>
 							<motion.a
 								whileHover={{ scale: 1.1 }}
-								// transition={{ type: 'spring', stiffness: 500 }}
+								transition={{ type: 'spring', stiffness: 500 }}
 								className="w-full btn btn-primary"
 								type="botton"
 							>
