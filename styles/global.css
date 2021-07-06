@@ -21,6 +21,14 @@
 	}
 }
 
+html {
+	overflow: hidden;
+}
+
+body {
+	overflow: auto;
+}
+
 html,
 body {
 	height: 100vh;
