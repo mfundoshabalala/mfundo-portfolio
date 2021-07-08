@@ -18,18 +18,18 @@ const NavLink: React.FC<NavLinkProps> = ({ children, href }) => {
 	};
 
 	return (
-		<div
+		<li
 			className={classNames(
-				router.asPath === href ? 'text-white btn-primary' : '',
-				'flex-1 px-3 transform -translate-x-5 rounded-sm shadow-sm bg-gradient-to-br hover:btn-primary hover:shadow-xl hover:text-white'
+				'btn transform -translate-x-5',
+				router.asPath === href ? 'btn-primary' : ''
 			)}
 		>
 			<Link href={href}>
-				<a className="block" onClick={handleClick} aria-hidden="true">
+				<a className="" onClick={handleClick} aria-hidden="true">
 					{children}
 				</a>
 			</Link>
-		</div>
+		</li>
 	);
 };
 
