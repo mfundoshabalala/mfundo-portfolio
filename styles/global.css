@@ -13,16 +13,31 @@
 	}
 
 	.btn {
-		@apply border whitespace-nowrap cursor-pointer text-center rounded-sm px-6 py-2 shadow-sm;
+		@apply btn-shadow border whitespace-nowrap cursor-pointer text-center rounded-md px-6 py-2 shadow-sm;
 	}
 
 	.btn-shadow {
-		@apply shadow-xl active:shadow-sm focus:shadow-sm;
+		@apply shadow-xl active:shadow-sm hover:shadow-md mix-blend-multiply;
 	}
 
 	.btn-primary {
-		@apply shadow-xl active:shadow-sm focus:shadow-sm from-blue-500  via-blue-600  to-blue-700 bg-gradient-to-br
+		@apply from-blue-500  via-blue-600  to-blue-700 bg-gradient-to-br
 		hover:from-blue-800 hover:via-blue-700 hover:to-blue-600 text-white font-medium;
+	}
+
+	.primary-gradient {
+		@apply bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600;
+	}
+
+	.btn-nav-active {
+		@apply font-medium hover:text-white
+		relative after:absolute after:bottom-0 after:w-full after:left-0
+		after:primary-gradient after:h-[3px] hover:after:h-full after:z-[-1] after:rounded-md;
+	}
+
+	.btn-nav-inactive {
+		@apply relative after:absolute after:bottom-0 after:w-full
+		after:left-0 after:h-[3px] after:z-[-1] hover:after:bg-gray-400 after:rounded-md;
 	}
 
 	.test {
