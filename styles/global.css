@@ -17,7 +17,7 @@
 	}
 
 	.btn-shadow {
-		@apply shadow-xl active:shadow-sm focus:shadow-sm
+		@apply shadow-xl active:shadow-sm focus:shadow-sm;
 	}
 
 	.btn-primary {
@@ -26,7 +26,7 @@
 	}
 
 	.test {
-		@apply bg-red-500 sm:bg-yellow-500 md:bg-green-500 lg:bg-blue-500
+		@apply bg-red-500 sm:bg-yellow-500 md:bg-green-500 lg:bg-blue-500;
 	}
 }
 
@@ -48,15 +48,16 @@ body {
 }
 
 ::-webkit-scrollbar {
-	width: 1.25rem;
+	width: 0.725rem;
 }
 
 ::-webkit-scrollbar-track {
 	border-radius: 99999px;
+	padding: 0;
 }
 
 ::-webkit-scrollbar-thumb {
-	background-clip: padding-box;
+	background-clip: border-box;
 	border: 4px solid rgba(0, 0, 0, 0);
 	border-radius: 99999px;
 	background-image: -webkit-gradient(
