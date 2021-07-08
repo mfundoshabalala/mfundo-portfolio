@@ -13,11 +13,20 @@
 	}
 
 	.btn {
-		@apply cursor-pointer text-center rounded px-6 py-2 shadow hover:shadow-md font-sans whitespace-nowrap bg-gradient-to-br hover:from-indigo-500 hover:via-indigo-800 hover:to-indigo-900 hover:text-white;
+		@apply border whitespace-nowrap cursor-pointer text-center rounded-sm px-6 py-2 shadow-sm;
+	}
+
+	.btn-shadow {
+		@apply shadow-xl active:shadow-sm focus:shadow-sm
 	}
 
 	.btn-primary {
-		@apply from-blue-400  via-blue-500  to-blue-800  text-gray-100;
+		@apply shadow-xl active:shadow-sm focus:shadow-sm from-blue-500  via-blue-600  to-blue-700 bg-gradient-to-br
+		hover:from-blue-800 hover:via-blue-700 hover:to-blue-600 text-white font-medium;
+	}
+
+	.test {
+		@apply bg-red-500 sm:bg-yellow-500 md:bg-green-500 lg:bg-blue-500
 	}
 }
 
