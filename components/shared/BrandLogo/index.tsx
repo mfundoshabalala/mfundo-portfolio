@@ -1,8 +1,7 @@
 import Link from 'next/link';
-import { FunctionComponent } from 'react';
 
-const BrandLogo: FunctionComponent = () => (
-	<div className="px-1 py-2 text-4xl font-black">
+const BrandLogo: React.FC = () => (
+	<div className="px-1 py-2 text-4xl font-black text-transparent bg-gradient-to-r bg-clip-text from-gray-900 via-gray-600 to-gray-900">
 		<Link href="/">
 			<a className="block tracking-tighter uppercase">
 				<span className="inline-block">M</span>
