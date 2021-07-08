@@ -196,10 +196,7 @@ const BlogCard: React.FC<BlogCardProps> = (props) => {
 			</main>
 
 			<footer className="flex flex-col items-center justify-center space-y-3 sm:flex-row sm:space-y-0">
-				<a
-					href="https://www.tailwindcss.com"
-					className="px-6 py-2 text-white bg-blue-500 border border-transparent border-solid rounded-sm shadow-lg drop-shadow-xl active:drop-shadow-sm"
-				>
+				<a href="https://www.tailwindcss.com" className="btn btn-primary">
 					Read the article
 				</a>
 			</footer>
