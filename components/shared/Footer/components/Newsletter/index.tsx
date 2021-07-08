@@ -1,19 +1,40 @@
 /* eslint-disable arrow-body-style */
-import { FunctionComponent } from 'react';
+import { useState } from "react";
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 //
 import AddTitleComponent from '../AddTitleComponent';
 
-const Newsletter: FunctionComponent<ITitledComponent> = ({ className, title }) => {
+const Newsletter: React.FC<ITitledComponent> = ({ className, title }) => {
+	const [value, setValue] = useState("");
+	const [error, setError] = useState("");
+
+	const handleChange: React.ChangeEventHandler<HTMLInputElement> = (event) => {
+		setValue(event.target.value);
+	};
+
+	const handleSubmit = (event: React.SyntheticEvent) => {
+		event.preventDefault();
+		if(value === "") setError("Please fill up email field.")
+
+		if(value !== "") {
+			// eslint-disable-next-line no-alert
+			alert(`Email ${value} has subscribed. Congratulations!!!`);
+			setValue("");
+			setError("");
+		}
+	};
+
 	return (
 		<>
 			<AddTitleComponent title={title}>
-				<form className="flex flex-row items-center justify-center w-full max-w-md px-8 space-x-2 md:w-3/5 md:px-0 flex-nowrap">
+				<form onSubmit={handleSubmit} className="flex flex-row items-center justify-center w-full max-w-md px-8 space-x-2 md:w-3/5 md:px-0 flex-nowrap">
 					<input
 						type="text"
-						className={classnames(className, 'flex-1 py-2 px-4 border border-solid border-gray-300 shadow rounded')}
+						value={value}
+						onChange={handleChange}
 						placeholder="Please enter your email"
+						className={classnames(className, 'flex-1 py-2 px-4 border border-solid border-gray-300 shadow-lg focus:shadow-sm rounded')}
 					/>
 					<button type="submit" className="btn btn-primary">
 						Subscribe

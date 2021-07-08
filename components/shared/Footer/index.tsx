@@ -11,9 +11,9 @@ const Footer: React.FC = () => (
 				<Newsletter title="Subscribe to my Newsletter" />
 				<SocialLinks title="Connect with me" />
 			</div>
-			<div className="flex flex-row flex-wrap justify-center w-full px-4 sm:space-y-0 md:space-x-2">
+			<div className="flex flex-row flex-wrap justify-center w-full px-4 text-sm sm:space-y-0 md:space-x-2">
 				<Attributions className="whitespace-pre hover:underline hover:text-purple-800" />
-				<Copyright author="Mfundo Shabalala" className="whitespace-pre"    />
+				<Copyright author="Mfundo Shabalala" className="whitespace-pre" />
 			</div>
 		</div>
 		<BackgroundWave />
