@@ -9,10 +9,9 @@ const CV: NextPage = () => (
 			<title>Curriculum Vitae</title>
 		</Head>
 		<BannerLayout
-			summary="For security reasons, you have request access to this file by filling the form below."
 			title="Curriculum Vitae"
-			bgColor="bg-red-600/90"
-			color="text-gray-50"
+			bgColor="from-red-800 via-red-500 via-red-500 to-red-800"
+			summary="For security reasons, you have request access to this file by filling the form below."
 		>
 			<p>Request access</p>
 		</BannerLayout>

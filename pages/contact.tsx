@@ -1,15 +1,8 @@
 import Head from 'next/head';
 import { NextPage } from 'next';
-import { motion } from 'framer-motion';
 import { AtSymbolIcon, PhoneIcon } from '@heroicons/react/solid';
 // components
 import BannerLayout from 'components/layout/BannerLayout';
-
-const containerVariant = {
-	hidden: { opacity: 0, scale: 1.5 },
-	show: { opacity: 1, scale: 1, transition: { delay: 1 } },
-	exit: { x: '-100vw', opacity: 0 },
-};
 
 const Contact: NextPage = () => (
 	<>
@@ -17,43 +10,42 @@ const Contact: NextPage = () => (
 			<title>Contact Me</title>
 		</Head>
 		<BannerLayout
-			summary="Get in touch with me to collaborate, hire me or just to say hello."
 			title="Contact Me"
-			bgColor="bg-gray-500"
-			color="text-gray-50"
+			bgColor="from-yellow-800 via-yellow-500 via-yellow-500 to-yellow-800"
+			summary="Get in touch with me to collaborate, hire me or just to say hello."
 		>
-			<motion.section variants={containerVariant} className="container p-10 mx-auto space-y-8 text-gray-600">
-				<div className="flex flex-col justify-center w-1/2 mx-auto space-y-6">
+			<section className="container p-10 mx-auto space-y-8 text-gray-600">
+				<div className="flex flex-col justify-center max-w-xl mx-auto space-y-6">
 					<h3 className="text-4xl font-black tracking-tight text-center text-gray-600 uppercase font-body text-shadow">
 						Get in touch with me
 					</h3>
 					<form className="flex flex-col items-stretch justify-around space-y-4">
-						<div className="flex flex-row flex-wrap space-x-5">
+						<div className="flex flex-col space-y-4 sm:space-y-0 sm:flex-row sm:space-x-6">
 							<input
-								className="flex-1 px-4 py-2 border border-gray-300 border-solid rounded shadow"
+								className="flex-1 px-4 py-2 border border-gray-300 rounded shadow-lg focus:shadow-sm"
 								type="text"
 								name="name"
 								id="name"
 								placeholder="First Name"
 							/>
 							<input
-								className="flex-1 px-4 py-2 border border-gray-300 border-solid rounded shadow"
+								className="flex-1 px-4 py-2 border border-gray-300 rounded shadow-lg focus:shadow-sm"
 								type="text"
 								name="surname"
 								id="surname"
 								placeholder="Last Name"
 							/>
 						</div>
-						<div className="flex flex-row flex-wrap space-x-5">
+						<div className="flex flex-col space-y-4 sm:space-y-0 sm:flex-row sm:space-x-6">
 							<input
-								className="flex-1 px-4 py-2 border border-gray-300 border-solid rounded shadow"
+								className="flex-1 px-4 py-2 border border-gray-300 rounded shadow-lg focus:shadow-sm"
 								type="text"
 								name="organization"
 								id="organization"
 								placeholder="Organization"
 							/>
 							<input
-								className="flex-1 px-4 py-2 border border-gray-300 border-solid rounded shadow"
+								className="flex-1 px-4 py-2 border border-gray-300 rounded shadow-lg focus:shadow-sm"
 								type="email"
 								name="email"
 								id="email"
@@ -62,15 +54,15 @@ const Contact: NextPage = () => (
 						</div>
 						<div className="">
 							<textarea
-								className="w-full px-4 py-2 border border-gray-300 border-solid rounded shadow"
+								className="w-full px-4 py-2 border border-gray-300 rounded shadow-lg focus:shadow-sm"
 								name="message"
 								id="message"
 								placeholder="Leave me a message"
 							/>
 						</div>
-						<div className="flex flex-row flex-wrap space-x-5">
+						<div className="flex flex-col space-y-4 sm:space-y-0 sm:flex-row sm:space-x-6">
 							<select
-								className="flex-1 px-4 py-2 border border-gray-300 border-solid rounded shadow"
+								className="flex-1 px-4 py-2 border border-gray-300 rounded shadow-lg focus:shadow-sm"
 								name="reason"
 								id="reason"
 							>
@@ -87,23 +79,21 @@ const Contact: NextPage = () => (
 					</form>
 				</div>
 				<hr />
-				<div className="flex justify-center">
-					<div className="flex flex-col">
-						<span className="">
-							<AtSymbolIcon className="inline-block w-6 h-6 mr-4" />
-							<a href="" className="hover:underline">
-								mfundoshabalala@gmail.com
-							</a>
-						</span>
-						<span className="">
-							<PhoneIcon className="inline-block w-6 h-6 mr-4" />
-							<a href="" className="hover:underline">
-								+27 604 843 666
-							</a>
-						</span>
-					</div>
+				<div className="flex flex-col justify-center mx-auto space-y-2 sm:space-x-6 sm:flex-row sm:space-y-0 min-w-max">
+					<span className="">
+						<AtSymbolIcon className="inline-block w-6 h-6 mr-4" />
+						<a href="" className="hover:underline">
+							mfundoshabalala@gmail.com
+						</a>
+					</span>
+					<span className="">
+						<PhoneIcon className="inline-block w-6 h-6 mr-4" />
+						<a href="" className="hover:underline">
+							+27 604 843 666
+						</a>
+					</span>
 				</div>
-			</motion.section>
+			</section>
 		</BannerLayout>
 	</>
 );

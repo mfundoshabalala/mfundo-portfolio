@@ -22,14 +22,14 @@ const Home: NextPage = () => (
 			<title>Home</title>
 		</Head>
 		<div className="container h-full mx-auto font-body">
-			<div className="flex flex-row h-full justify-evenly">
+			<div className="flex flex-col h-full md:flex-row justify-evenly">
 				<motion.div
 					key="introductionImage"
 					variants={imageVariant}
 					initial="hidden"
 					animate="show"
 					exit="exit"
-					className="relative flex-1 bg-center bg-no-repeat bg-contain bg-clip-content"
+					className="relative flex-1 hidden bg-center bg-no-repeat bg-contain md:block bg-clip-content"
 					style={{ backgroundImage: `url(/images/programmer-animate.svg)` }}
 				/>
 				<motion.div

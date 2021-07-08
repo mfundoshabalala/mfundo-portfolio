@@ -21,21 +21,11 @@ const Portfolio: NextPage = () => {
 				summary="Showcasing my careful curated projects that I hope you will enjoy."
 				quote="Find out what you like doing best and get someone to pay you for doing it. —Katherine Whitehorn"
 				title="Portfolio Page"
-				bgColor="bg-blue-600"
+				bgColor="from-blue-800 via-blue-500 via-blue-500 to-blue-800"
 				color="text-gray-50"
 			>
 				<ul className="flex flex-row flex-wrap bg-blue-500 ">
-					{/* {_.map(portfolio, project => (
-						<li key={project.id}>
-							<Link href={`/portfolio/${project.id}`}>
-								<a>
-									<img src="https://dummyimage.com/50.png" alt="" />
-									<h1>{project.title}</h1>
-									<p>{project.summary}</p>
-								</a>
-							</Link>
-						</li>
-					))} */}
+					<li>Portfolio</li>
 				</ul>
 			</BannerLayout>
 		</>
