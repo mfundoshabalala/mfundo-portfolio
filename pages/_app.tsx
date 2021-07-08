@@ -1,13 +1,13 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import { AppProps } from 'next/app';
 import { UserProvider } from '@auth0/nextjs-auth0';
-// basic site layout component
-import BasicLayout from 'components/layout/BasicLayout';
+import { AnimatePresence } from 'framer-motion';
 // global app styles + tailwindcss default styles
 import '../styles/global.css';
-import { AnimatePresence } from 'framer-motion';
+// basic site layout component
+import BasicLayout from 'components/layout/BasicLayout';
 
-function MyApp({ Component, pageProps, router }: AppProps): JSX.Element {
+function App({ Component, pageProps, router }: AppProps): JSX.Element {
 	return (
 		<UserProvider>
 			<AnimatePresence exitBeforeEnter>
@@ -19,4 +19,4 @@ function MyApp({ Component, pageProps, router }: AppProps): JSX.Element {
 	);
 }
 
-export default MyApp;
+export default App;

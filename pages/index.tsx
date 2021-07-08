@@ -4,15 +4,15 @@ import { NextPage } from 'next';
 import { motion } from 'framer-motion';
 
 const imageVariant = {
-	hidden: { x: 200, opacity: 0, z: -2000 },
-	show: { x: 0, opacity: 1, z: 0, transition: { delay: 1, duration: 0.5 } },
-	exit: { x: 200, opacity: 0, transition: { duration: 5 } },
+	hidden: { x: -200, opacity: 0 },
+	show: { x: 0, opacity: 1, transition: { delay: 1, duration: 0.5 } },
+	exit: { x: -200, opacity: 0, transition: { duration: 5 } },
 };
 
 const textVariant = {
-	hidden: { x: -200, opacity: 0 },
+	hidden: { x: 200, opacity: 0 },
 	show: { x: 0, opacity: 1, transition: { duration: 0.5 } },
-	exit: { x: -200, opacity: 0, transition: { duration: 0.5 } },
+	exit: { x: 200, opacity: 0, transition: { duration: 0.5 } },
 };
 
 const Home: NextPage = () => (
