@@ -1,12 +1,12 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
-import {useRouter} from "next/router";
-import classNames from "classnames";
+import classNames from 'classnames';
 
 interface NavLinkProps {
 	href: string;
 	children: React.ReactNode;
-};
+}
 
 const NavLink: React.FC<NavLinkProps> = ({ children, href }) => {
 	const router = useRouter();
@@ -18,14 +18,9 @@ const NavLink: React.FC<NavLinkProps> = ({ children, href }) => {
 	};
 
 	return (
-		<li
-			className={classNames(
-				'btn transform -translate-x-5',
-				router.asPath === href ? 'btn-primary' : ''
-			)}
-		>
+		<li className={classNames('btn', router.asPath === href ? 'btn-nav-active' : 'btn-nav-inactive')}>
 			<Link href={href}>
-				<a className="" onClick={handleClick} aria-hidden="true">
+				<a className="relative" onClick={handleClick} aria-hidden="true">
 					{children}
 				</a>
 			</Link>

@@ -27,8 +27,6 @@ const Navbar: React.FC<NavbarProps> = (props) => {
 			</nav>
 		</>
 	);
-
-
 };
 
 export default Navbar;
