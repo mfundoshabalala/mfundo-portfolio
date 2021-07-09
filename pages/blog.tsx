@@ -15,11 +15,13 @@ const Blog: React.FC<Posts> = () => (
 			bgColor="from-green-800 via-green-500 via-green-500 to-green-800"
 			summary="This is the place where I share my experiences and expertise. Enjoy."
 		>
-			<ul className="py-10 space-y-10">
-				{[{ id: 1 }, { id: 2 }, { id: 3 }].map((post) => (
-					<BlogCard key={post.id} {...post} />
-				))}
-			</ul>
+			<section className="container mx-auto">
+				<ul className="flex flex-wrap items-center justify-around py-10 md:flex-row">
+					{[{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }].map((post) => (
+						<BlogCard key={post.id} {...post} />
+					))}
+				</ul>
+			</section>
 		</BannerLayout>
 	</>
 );
