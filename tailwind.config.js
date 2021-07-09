@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors');
+
 module.exports = {
 	mode: 'jit',
 	purge:  [
@@ -7,6 +9,10 @@ module.exports = {
 	darkMode: false, // or 'media' or 'class'
 	theme: {
 		extend: {
+			colors: {
+				cyan: colors.cyan,
+				orange: colors.orange,
+			},
 			fontFamily: {
 				header: ['"Dancing Script"'],
 				body: ['"Fira Code"'],
