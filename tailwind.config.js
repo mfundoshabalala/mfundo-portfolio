@@ -15,8 +15,13 @@ module.exports = {
 			},
 			fontFamily: {
 				header: ['"Dancing Script"'],
-				body: ['"Fira Code"'],
-				lato: ["Lato"],
+				firaCode: ['"Fira Code"'],
+				firaSans: ["'Fira Sans'"],
+				lato: ["'Lato'"],
+				lora: ["'lora', serif"],
+				roboto: ["'Roboto'"],
+				open: ["'OpenSans'"],
+				poppins: ["'Poppins'"],
 			},
 			backgroundImage: {
 				image: `url("/images/background-image.png")`,
