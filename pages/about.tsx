@@ -8,7 +8,7 @@ const About: NextPage = () => (
 		</Head>
 		<div className="flex flex-wrap items-stretch h-full">
 			<div className="flex items-center flex-1 bg-opacity-0 bg-image">
-				<div className="flex-1 space-y-10 text-center filter drop-shadow-2xl font-body">
+				<div className="flex-1 space-y-10 text-center filter drop-shadow-2xl font-firaSans">
 					<h1 className="text-6xl font-bold text-">Hello, Welcome</h1>
 					<h2 className="text-4xl font-semibold">To my About Me Page</h2>
 					<p className="">Feel free to read short description about me.</p>
