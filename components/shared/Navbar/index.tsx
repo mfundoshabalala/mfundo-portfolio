@@ -20,8 +20,8 @@ const Navbar: React.FC<NavbarProps> = (props) => {
 				<ul className="flex flex-col space-x-2 md:flex-row min-w-max">
 					<NavLink href="/about">About</NavLink>
 					<NavLink href="/portfolio">Portfolio</NavLink>
-					<NavLink href="/blog">Blog</NavLink>
 					<NavLink href="/cv">Resume</NavLink>
+					<NavLink href="/blog">Blog</NavLink>
 					<NavLink href="/contact">Contact</NavLink>
 				</ul>
 			</nav>
