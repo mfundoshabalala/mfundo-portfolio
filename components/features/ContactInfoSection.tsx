@@ -1,15 +1,15 @@
-import { AtSymbolIcon, PhoneIcon } from '@heroicons/react/solid';
+import IconComponent from 'components/shared/IconComponent';
 
 const ContactInfoSection: React.FC = () => (
 	<section className="flex flex-col justify-center mx-auto space-y-2 sm:space-x-6 sm:flex-row sm:space-y-0 min-w-max">
 		<span className="">
-			<AtSymbolIcon className="inline-block w-6 h-6 mr-4" />
+			<IconComponent icon="email" />
 			<a href="" className="hover:underline">
 				mfundoshabalala@gmail.com
 			</a>
 		</span>
 		<span className="">
-			<PhoneIcon className="inline-block w-6 h-6 mr-4" />
+			<IconComponent icon="phone" />
 			<a href="" className="hover:underline">
 				+27 604 843 666
 			</a>
