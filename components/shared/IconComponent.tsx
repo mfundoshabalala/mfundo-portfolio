@@ -11,7 +11,7 @@ interface IconProps {
 const IconComponent: React.FC<IconProps> = (props) => {
 	const { icon, height = 'h-5', width = 'w-5', opacity = 'opacity-100' } = props;
 	return (
-		<svg className={classNames(height, width, opacity, 'inline-block m-2')}>
+		<svg className={classNames(height, width, opacity, 'block')}>
 			<use xlinkHref={`/sprite.svg#${icon}`} />
 		</svg>
 	);
