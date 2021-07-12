@@ -6,7 +6,7 @@ const BlogCard: React.FC<BlogCardProps> = (props) => {
 	const { id } = props;
 
 	return (
-		<li className="flex flex-col justify-between p-10 mb-6 text-white rounded-lg shadow-2xl max-w-prose bg-gradient-to-tr from-green-400 via-green-600 to-green-700 h-60">
+		<li className="flex flex-col justify-between p-10 text-white rounded-lg hover:shadow-xl max-w-prose bg-gradient-to-tr from-green-400 via-green-600 to-green-700 h-60">
 			<header className="font-serif text-3xl font-thin">Lorem ipsum dolor sit amet consectetur.</header>
 			<footer className="flex items-end justify-between">
 				<ul className="flex flex-row space-x-1">
