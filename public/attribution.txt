@@ -1,0 +1,19 @@
+<a href="https://iconscout.com/icons/target" target="_blank">Target Icon</a> by <a href="https://iconscout.com/contributors/bzzricon" target="_blank">BZZRICON Studio</a>
+
+
+<a href="https://iconscout.com/icons/typescript" target="_blank">Typescript Icon</a> by <a href="https://iconscout.com/contributors/icon-mafia">Icon Mafia</a> on <a href="https://iconscout.com">Iconscout</a>
+<a href="https://iconscout.com/icons/github" target="_blank">Github Icon</a> by <a href="https://iconscout.com/contributors/icon-mafia" target="_blank">Icon Mafia</a>
+<a href="https://iconscout.com/icons/yarn" target="_blank">Yarn Icon</a> by <a href="https://iconscout.com/contributors/icon-mafia">Icon Mafia</a> on <a href="https://iconscout.com">Iconscout</a>
+<a href="https://iconscout.com/icons/webpack" target="_blank">Webpack Icon</a> by <a href="https://iconscout.com/contributors/icon-mafia" target="_blank">Icon Mafia</a>
+<a href="https://iconscout.com/icons/mysql" target="_blank">Mysql Icon</a> by <a href="https://iconscout.com/contributors/icon-mafia" target="_blank">Icon Mafia</a>
+<a href="https://iconscout.com/icons/node-js" target="_blank">Node Js Icon</a> by <a href="https://iconscout.com/contributors/icon-mafia" target="_blank">Icon Mafia</a>
+<a href="https://iconscout.com/icons/html5" target="_blank">Html5 Icon</a> on <a href="https://iconscout.com">Iconscout</a>
+<a href="https://iconscout.com/icons/css3" target="_blank">Css3 Icon</a> by <a href="https://iconscout.com/contributors/maninderkaur" target="_blank">Maninder Kaur</a>
+<a href="https://iconscout.com/icons/bootstrap" target="_blank">Bootstrap Icon</a> by <a href="https://iconscout.com/contributors/maninderkaur" target="_blank">Maninder Kaur</a>
+<a href="https://iconscout.com/icons/python" target="_blank">Python Icon</a> by <a href="https://iconscout.com/contributors/icon-mafia" target="_blank">Icon Mafia</a>
+<a href="https://iconscout.com/icons/email" target="_blank">Email Icon</a> by <a href="https://iconscout.com/contributors/lagotdesign" target="_blank">Bawie Cahyo</a>
+<a href="https://iconscout.com/icons/whatsapp-circle" target="_blank">Whatsapp circle Icon</a> by <a href="https://iconscout.com/contributors/maninderkaur">Maninder Kaur</a> on <a href="https://iconscout.com">Iconscout</a>
+<a href="https://iconscout.com/icons/twitter" target="_blank">Twitter Icon</a> by <a href="https://iconscout.com/contributors/maninderkaur">Maninder Kaur</a> on <a href="https://iconscout.com">Iconscout</a>
+<a href="https://iconscout.com/icons/facebook" target="_blank">Facebook Icon</a> by <a href="https://iconscout.com/contributors/icon-mafia">Icon Mafia</a> on <a href="https://iconscout.com">Iconscout</a>
+<a href="https://iconscout.com/icons/linkedin" target="_blank">Linkedin Icon</a> by <a href="https://iconscout.com/contributors/alexis-doreau" target="_blank">Alexis Doreau</a>
+
