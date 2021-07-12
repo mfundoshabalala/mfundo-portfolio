@@ -18,9 +18,9 @@ const NavLink: React.FC<NavLinkProps> = ({ children, href }) => {
 	};
 
 	return (
-		<li className={classNames('btn', router.asPath === href ? 'btn-nav-active' : 'btn-nav-inactive')}>
+		<li>
 			<Link href={href}>
-				<a className="relative" onClick={handleClick} aria-hidden="true">
+				<a className={classNames('relative btn', router.asPath === href ? 'btn-nav-active' : 'btn-nav-inactive')}onClick={handleClick} aria-hidden="true">
 					{children}
 				</a>
 			</Link>
