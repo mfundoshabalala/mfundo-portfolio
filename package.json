@@ -1,5 +1,5 @@
 {
-	"name": "portfolio_project",
+	"name": "portfolio_site",
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
@@ -11,18 +11,18 @@
 		"format": "prettier --write .",
 		"lint": "eslint . --ext ts --ext tsx --ext js",
 		"test": "jest",
-		"test-all": "yarn run lint && yarn run type-check && yarn run test"
+		"test-all": "npm run lint && npm run type-check && npm run test"
 	},
 	"husky": {
 		"hooks": {
 			"pre-commit": "lint-staged",
-			"pre-push": "yarn run type-check"
+			"pre-push": "npm run type-check"
 		}
 	},
 	"lint-staged": {
 		"*.@(ts|tsx)": [
-			"yarn run lint",
-			"yarn run format"
+			"npm run lint",
+			"npm run format"
 		]
 	},
 	"dependencies": {
@@ -37,7 +37,7 @@
 		"framer-motion": "^4.1.17",
 		"isomorphic-fetch": "^3.0.0",
 		"lodash": "^4.17.21",
-		"next": "11.0.0",
+		"next": "^11.1.0",
 		"next-themes": "^0.0.14",
 		"prop-types": "^15.7.2",
 		"react": "^17.0.2",
