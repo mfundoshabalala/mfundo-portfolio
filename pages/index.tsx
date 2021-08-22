@@ -2,6 +2,8 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { NextPage } from 'next';
 import { motion } from 'framer-motion';
+// components
+import IconComponent from "components/shared/IconComponent";
 
 const imageVariant = {
 	hidden: { x: -200, opacity: 0 },
@@ -30,7 +32,7 @@ const Home: NextPage = () => (
 					animate="show"
 					exit="exit"
 					className="relative flex-1 hidden bg-center bg-no-repeat bg-contain md:block bg-clip-content"
-					style={{ backgroundImage: `url(/images/programmer-animate.svg)` }}
+					style={{ backgroundImage: `url(/images/svg/programmer-animate-2.svg)` }}
 				/>
 				<motion.div
 					key="introductionText"
