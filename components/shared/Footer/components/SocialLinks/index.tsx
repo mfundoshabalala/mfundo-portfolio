@@ -12,7 +12,7 @@ const SocialIcon: React.FC<ISocialIcon> = ({ brandName, brandUrl = '' }) => (
 		aria-label={`${brandName} link`}
 		rel="noreferrer"
 	>
-		<span className="block w-12 h-12 p-3 border border-gray-300 rounded-full --animate-reverse">
+		<span className="block p-3 border border-gray-300 rounded-full w-11 h-11 drop-shadow-sm hover:drop-shadow-none active:drop-shadow-none --animate-reverse">
 			<IconComponent icon={brandName} height="h-full" width="w-full" />
 		</span>
 	</a>
@@ -29,7 +29,7 @@ SocialIcon.defaultProps = {
 
 const SocialLinks: React.FC<ITitledComponent> = ({ className, title }) => (
 	<AddTitleComponent title={title}>
-		<div className={classnames(className, 'filter drop-shadow-lg space-x-3 flex flex-row')}>
+		<div className={classnames(className, 'gap-x-3 flex flex-row')}>
 			<SocialIcon brandName="facebook" brandUrl="https://www.facebook.com" />
 			<SocialIcon brandName="twitter" brandUrl="https://www.twitter.com" />
 			<SocialIcon brandName="linkedin" brandUrl="https://www.linkedin.com" />

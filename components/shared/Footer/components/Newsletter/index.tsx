@@ -31,7 +31,7 @@ const Newsletter: React.FC<ITitledComponent> = ({ className, title }) => {
 			<AddTitleComponent title={title}>
 				<form
 					onSubmit={handleSubmit}
-					className="flex flex-row items-center justify-center w-full max-w-md px-8 space-x-2 md:w-3/5 md:px-0 flex-nowrap"
+					className="flex flex-row items-center w-full h-full max-w-md px-8 space-x-2 md:w-3/5 md:px-0 flex-nowrap"
 				>
 					<input
 						type="text"
@@ -40,10 +40,10 @@ const Newsletter: React.FC<ITitledComponent> = ({ className, title }) => {
 						placeholder="Please enter your email"
 						className={classnames(
 							className,
-							'flex-1 py-2 px-4 border border-solid border-gray-300 shadow-lg focus:shadow-sm rounded'
+							'flex-1 py-2 px-4 border border-solid border-gray-300 shadow-md focus:shadow-sm rounded'
 						)}
 					/>
-					<button type="submit" className="btn btn-primary">
+					<button type="submit" className="shadow-md focus:shadow-sm active:shadow-sm btn btn-primary">
 						Subscribe
 					</button>
 				</form>
