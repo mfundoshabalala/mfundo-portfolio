@@ -48,6 +48,10 @@ font-family: 'Roboto', sans-serif; */
 		hover:after:primary-gradient after:h-[3px] after:z-[-1] after:rounded-md;
 	}
 
+	.link {
+	  @apply underline text-blue-600 hover:text-blue-800 visited:text-purple-600 font-normal;
+	}
+
 	.test {
 		@apply bg-red-500 sm:bg-yellow-500 md:bg-green-500 lg:bg-blue-500;
 	}
