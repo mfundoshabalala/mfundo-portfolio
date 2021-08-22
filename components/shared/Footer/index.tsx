@@ -3,7 +3,7 @@ import Newsletter from './components/Newsletter';
 import SocialLinks from './components/SocialLinks';
 
 const Footer: React.FC = () => (
-	<footer className="relative py-10 font-light text-gray-900 border">
+	<footer className="relative pt-10 pb-5 font-light text-gray-900 border">
 		<section className="container relative z-10 flex flex-col justify-between mx-auto gap-y-8">
 			<section className="flex flex-row flex-wrap justify-between gap-4">
 				<Newsletter title="Subscribe to my newsletter" />
