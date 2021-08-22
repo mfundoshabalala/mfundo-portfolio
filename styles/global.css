@@ -49,7 +49,7 @@ font-family: 'Roboto', sans-serif; */
 	}
 
 	.link {
-	  @apply underline text-blue-600 hover:text-blue-800 visited:text-purple-600 font-normal;
+	  @apply underline text-blue-600 hover:text-blue-800 visited:text-purple-600 font-bold;
 	}
 
 	.test {
@@ -101,48 +101,48 @@ body {
 	height: 100%;
 }
 
-.--active {
-	background-color: red;
+.--animate {
+	border: 2px dotted transparent;
 }
 
-.facebook:hover {
+.facebook {
 	border-bottom-color: #3b5998;
 }
 
-.twitter:hover {
+.twitter {
 	border-bottom-color: #1da1f2;
 }
 
-.linkedin:hover {
+.linkedin {
 	border-bottom-color: #0a66c2;
 }
 
-.whatsapp:hover {
+.whatsapp {
 	border-bottom-color: #25d366;
 }
 
-.github:hover {
+.github {
 	border-bottom-color: #171515;
 }
 
-.dark .github:hover {
+.dark .github {
 	border-bottom-color: #f2f2f2;
 }
 
-.--animate {
-	border: 2px solid transparent;
+.whatsapp {
+	border-bottom-color: #25d366;
 }
 
 .--animate:hover {
 	animation-name: rotation-animation;
-	animation-duration: 3s;
+	animation-duration: 5s;
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
 }
 
 .--animate:hover .--animate-reverse {
 	animation-name: rotation-animation-reverse;
-	animation-duration: 3s;
+	animation-duration: 5s;
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
 }
