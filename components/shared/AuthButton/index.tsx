@@ -8,7 +8,7 @@ const AuthButton: FunctionComponent = () => {
 	if (isLoading) {
 		return (
 			<Link href="/api/auth/login">
-				<a className="rounded-sm px-3 shadow-sm">Log In</a>
+				<a className="btn">Log In</a>
 			</Link>
 		);
 	}
@@ -17,7 +17,7 @@ const AuthButton: FunctionComponent = () => {
 		return (
 			<>
 				<Link href="/api/auth/logout">
-					<a className="rounded-sm px-3 shadow-sm">Log Out</a>
+					<a className="btn">Log Out</a>
 				</Link>
 			</>
 		);
@@ -25,7 +25,9 @@ const AuthButton: FunctionComponent = () => {
 
 	return (
 		<Link href="/api/auth/login">
-			<a className="rounded-sm px-3 shadow-sm">Log In</a>
+			<a type="button" className="btn">
+				Log In
+			</a>
 		</Link>
 	);
 };
