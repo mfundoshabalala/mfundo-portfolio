@@ -49,6 +49,7 @@
 		"@types/eslint-plugin-prettier": "^3.1.0",
 		"@types/isomorphic-fetch": "^0.0.35",
 		"@types/lodash": "^4.14.169",
+		"@types/next": "^9.0.0",
 		"@types/node": "^15.6.1",
 		"@types/prettier": "^2.2.3",
 		"@types/prop-types": "^15.7.3",
