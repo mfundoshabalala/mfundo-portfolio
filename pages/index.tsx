@@ -2,8 +2,6 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { NextPage } from 'next';
 import { motion } from 'framer-motion';
-// components
-import IconComponent from "components/shared/IconComponent";
 
 const imageVariant = {
 	hidden: { x: -200, opacity: 0 },
