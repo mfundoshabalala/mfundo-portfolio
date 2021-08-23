@@ -49,7 +49,7 @@ font-family: 'Roboto', sans-serif; */
 	}
 
 	.link {
-	  @apply underline text-blue-600 hover:text-blue-800 visited:text-purple-600 font-bold;
+		@apply underline text-blue-600 hover:text-blue-800 visited:text-purple-600 font-bold;
 	}
 
 	.test {
