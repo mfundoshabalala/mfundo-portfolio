@@ -2,7 +2,7 @@ import Head from 'next/head';
 import { NextPage } from 'next';
 // components
 import BannerLayout from 'components/layout/BannerLayout';
-import BlogCard from 'components/features/BlogCard';
+import BlogPostsList from 'components/features/BlogPostsList';
 
 const Blog: NextPage = () => {
 	const pageDetails = {
@@ -17,13 +17,7 @@ const Blog: NextPage = () => {
 				<title>Blog Posts</title>
 			</Head>
 			<BannerLayout {...pageDetails}>
-				<section className="container p-6 mx-auto">
-					<ul className="flex flex-wrap items-center justify-center gap-6 md:flex-row">
-						{[{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }].map((post) => (
-							<BlogCard key={post.id} {...post} />
-						))}
-					</ul>
-				</section>
+				<BlogPostsList />
 			</BannerLayout>
 		</>
 	);
