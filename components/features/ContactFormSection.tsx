@@ -1,71 +1,32 @@
-import IconComponent from 'components/shared/IconComponent';
+import ContactForm from 'components/shared/ContactForm';
+import ContactFormGroup from 'components/shared/ContactFormGroup';
+import ContactFormHeader from 'components/shared/ContactFormHeader';
+import ContactFormInput from 'components/shared/ContactFormInput';
+import ContactFormSelect from 'components/shared/ContactFormSelect';
+import ContactFormTextArea from 'components/shared/ContactFormTextArea';
 
 const ContactFormSection: React.FC = () => (
-	<section className="flex flex-col justify-center max-w-xl mx-auto space-y-6">
-		<h3 className="text-4xl font-black tracking-tight text-center uppercase font-firaSans drop-shadow">
-			Shoot me a message{' '}
-			<span className="inline-block w-8 h-8">
-				<IconComponent icon="shoot" />
-			</span>
-		</h3>
-		<form className="flex flex-col items-stretch justify-around space-y-4">
-			<div className="flex flex-col space-y-4 sm:space-y-0 sm:flex-row sm:space-x-6">
-				<input
-					className="flex-1 px-4 py-2 border border-gray-300 rounded shadow-lg focus:shadow-sm"
-					type="text"
-					name="name"
-					id="name"
-					placeholder="First Name"
-				/>
-				<input
-					className="flex-1 px-4 py-2 border border-gray-300 rounded shadow-lg focus:shadow-sm"
-					type="text"
-					name="surname"
-					id="surname"
-					placeholder="Last Name"
-				/>
-			</div>
-			<div className="flex flex-col space-y-4 sm:space-y-0 sm:flex-row sm:space-x-6">
-				<input
-					className="flex-1 px-4 py-2 border border-gray-300 rounded shadow-lg focus:shadow-sm"
-					type="text"
-					name="organization"
-					id="organization"
-					placeholder="Organization"
-				/>
-				<input
-					className="flex-1 px-4 py-2 border border-gray-300 rounded shadow-lg focus:shadow-sm"
-					type="email"
-					name="email"
-					id="email"
-					placeholder="Email Address"
-				/>
-			</div>
-			<div className="">
-				<textarea
-					className="w-full px-4 py-2 border border-gray-300 rounded shadow-lg focus:shadow-sm"
-					name="message"
-					id="message"
-					placeholder="Leave me a message"
-				/>
-			</div>
-			<div className="flex flex-col space-y-4 sm:space-y-0 sm:flex-row sm:space-x-6">
-				<select
-					className="flex-1 px-4 py-2 border border-gray-300 rounded shadow-lg focus:shadow-sm"
-					name="reason"
-					id="reason"
-				>
-					<option value="">Collaboration</option>
-					<option value="">Job Opportunity</option>
-					<option value="">Complements</option>
-				</select>
+	<section className="flex flex-col justify-center max-w-xl mx-auto gap-y-6">
+		<ContactFormHeader />
+		<ContactForm>
+			<ContactFormGroup>
+				<ContactFormInput className="form-input" name="name" id="name" placeholder="First Name" />
+				<ContactFormInput className="form-input" name="surname" id="surname" placeholder="Last Name" />
+			</ContactFormGroup>
+			<ContactFormGroup>
+				<ContactFormInput className="form-input" name="organization" id="organization" placeholder="Organization" />
+				<ContactFormInput className="form-input" type="email" name="email" id="email" placeholder="Email Address" />
+			</ContactFormGroup>
+			<ContactFormTextArea name="message" id="message" placeholder="Leave me a message" />
+			<div className="flex flex-col gap-y-4 sm:gap-y-0 sm:flex-row sm:gap-x-6">
+				<ContactFormSelect />
 				<div className="flex flex-row items-center justify-center flex-1 px-4">
 					<button className="w-full btn btn-primary" type="submit">
 						Contact Me
 					</button>
 				</div>
 			</div>
-		</form>
+		</ContactForm>
 	</section>
 );
 
