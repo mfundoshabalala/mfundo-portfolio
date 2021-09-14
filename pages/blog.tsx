@@ -1,28 +1,26 @@
 import Head from 'next/head';
+import { NextPage } from 'next';
 // components
 import BannerLayout from 'components/layout/BannerLayout';
-import BlogCard from 'components/features/BlogCard';
+import BlogPostsList from 'components/features/BlogPostsList';
 
-const Blog: React.FC<Posts> = () => (
-	<>
-		<Head>
-			<title>Blog Posts</title>
-			<link rel="icon" href="/favicon.ico" />
-		</Head>
-		<BannerLayout
-			title="Blog Posts"
-			bgColor="from-green-800 via-green-500 via-green-500 to-green-800"
-			summary="This is the place where I share my experiences and expertise. Enjoy."
-		>
-			<section className="container p-6 mx-auto">
-				<ul className="flex flex-wrap items-center justify-center gap-6 md:flex-row">
-					{[{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }].map((post) => (
-						<BlogCard key={post.id} {...post} />
-					))}
-				</ul>
-			</section>
-		</BannerLayout>
-	</>
-);
+const Blog: NextPage = () => {
+	const pageDetails = {
+		title: 'Blog Posts',
+		bgColor: 'from-green-800 via-green-500 via-green-500 to-green-800',
+		summary: 'This is the place where I share my experiences and expertise. Enjoy.',
+	};
+
+	return (
+		<>
+			<Head>
+				<title>Blog Posts</title>
+			</Head>
+			<BannerLayout {...pageDetails}>
+				<BlogPostsList />
+			</BannerLayout>
+		</>
+	);
+};
 
 export default Blog;

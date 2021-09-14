@@ -17,14 +17,14 @@ const About: NextPage = () => (
 			<div className="flex items-center flex-1">
 				<div className="flex-1 px-8 space-y-3">
 					<p className="first-letter:text-5xl first-letter:font-bold first-letter:float-left">
-						My name is Mfundo Bright Shabalala and I am an inexperienced software developer looking for an opportunity
-						to be part of a great organization.
+						My name is Mfundo Bright Shabalala and I am an fullstack software developer looking for an opportunity to be
+						part of a great organization.
 					</p>
-					<p className="first-letter:text-5xl first-letter:font-bold first-letter:float-left">
+					<p className="">
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis ad placeat consectetur ipsum quas
 						nulla modi nobis tempora facere iste blanditiis consequuntur neque delectus in, ex totam? Aliquid, modi ab?
 					</p>
-					<p className="first-letter:text-5xl first-letter:font-bold first-letter:float-left">
+					<p className="">
 						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius blanditiis dolore, alias nisi illo minima
 						expedita illum at ex cumque voluptatem obcaecati delectus quas nihil harum reiciendis commodi amet. Beatae
 						voluptatibus, sed ratione eveniet cum ipsa. Fugit exercitationem doloribus sit eligendi, labore iusto
