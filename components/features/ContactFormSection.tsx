@@ -2,7 +2,7 @@ import ContactForm from 'components/shared/ContactForm';
 import ContactFormGroup from 'components/shared/ContactFormGroup';
 import ContactFormHeader from 'components/shared/ContactFormHeader';
 import ContactFormInput from 'components/shared/ContactFormInput';
-import ContactFormSelect from 'components/shared/ContactFormSelect';
+// import ContactFormSelect from 'components/shared/ContactFormSelect';
 import ContactFormTextArea from 'components/shared/ContactFormTextArea';
 
 const ContactFormSection: React.FC = () => (
@@ -18,14 +18,14 @@ const ContactFormSection: React.FC = () => (
 				<ContactFormInput className="form-input" type="email" name="email" id="email" placeholder="Email Address" />
 			</ContactFormGroup>
 			<ContactFormTextArea name="message" id="message" placeholder="Leave me a message" />
-			<div className="flex flex-col gap-y-4 sm:gap-y-0 sm:flex-row sm:gap-x-6">
-				<ContactFormSelect />
-				<div className="flex flex-row items-center justify-center flex-1 px-4">
-					<button className="w-full btn btn-primary" type="submit">
+			<section className="flex flex-col gap-y-4 sm:gap-y-0 sm:flex-row sm:gap-x-6">
+				{/* <ContactFormSelect /> */}
+				<div className="flex flex-row items-center justify-center flex-1">
+					<button className="w-full max-w-xs btn btn-primary" type="submit">
 						Contact Me
 					</button>
 				</div>
-			</div>
+			</section>
 		</ContactForm>
 	</section>
 );

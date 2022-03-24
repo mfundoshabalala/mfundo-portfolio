@@ -13,7 +13,7 @@ const IntroductionImage: React.FC = () => (
 		initial="hidden"
 		animate="show"
 		exit="exit"
-		className="relative flex-1 hidden bg-center bg-no-repeat bg-contain md:block bg-clip-content"
+		className="relative flex-1 bg-center bg-no-repeat bg-contain md:block bg-clip-content"
 		style={{ backgroundImage: `url(/images/svg/programmer-animate-2.svg)` }}
 	/>
 );

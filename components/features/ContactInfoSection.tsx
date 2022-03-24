@@ -1,19 +1,10 @@
-import IconComponent from 'components/shared/IconComponent';
+// import IconComponent from 'components/shared/IconComponent';
+import ContactInfoItem from './ContactInfoItem';
 
 const ContactInfoSection: React.FC = () => (
-	<section className="flex flex-col justify-between max-w-xl mx-auto space-y-2 sm:space-x-6 sm:flex-row sm:space-y-0 min-w-max">
-		<span className="flex flex-row items-center justify-center space-x-2 flex-nowrap">
-			<IconComponent icon="email" />
-			<a href="" className="hover:underline hover:text-blue-700">
-				mfundoshabalala@gmail.com
-			</a>
-		</span>
-		<span className="flex flex-row items-center justify-center space-x-2 flex-nowrap">
-			<IconComponent icon="phone" />
-			<a href="" className="hover:underline hover:text-blue-700">
-				060 484 3666
-			</a>
-		</span>
+	<section className="container flex justify-center max-w-md gap-6 mx-auto text-gray-600">
+		<ContactInfoItem text="mfundoshabalala@gmail.com" icon="email" opacity="opacity-60" href="www.google.com" />
+		<ContactInfoItem text="060-484-3666" icon="phone" opacity="opacity-90" href="https://www.google.com" />
 	</section>
 );
 

@@ -18,7 +18,7 @@ const Contact: NextPage = () => {
 				<title>Contact Me</title>
 			</Head>
 			<BannerLayout {...pageDetails}>
-				<section className="container p-10 mx-auto text-gray-700 gap-y-8">
+				<section className="container p-10 mx-auto space-y-8 text-gray-700">
 					<ContactFormSection />
 					<ContactInfoSection />
 				</section>
