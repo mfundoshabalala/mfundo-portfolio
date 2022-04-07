@@ -45,13 +45,10 @@
 		hover:after:primary-gradient after:h-[3px] after:z-[-1] after:rounded-md;
 	}
 
-	.link {
-		@apply underline text-blue-600 hover:text-blue-800 visited:text-purple-600 font-bold;
+	.dark-section {
+		@apply bg-gradient-radial from-gray-700 via-slate-800 to-gray-900 text-white;
 	}
 
-	.test {
-		@apply bg-red-500 sm:bg-yellow-500 md:bg-green-500 lg:bg-blue-500;
-	}
 }
 
 html {
@@ -72,7 +69,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-	width: 0.6rem;
+	width: 0rem;
 }
 
 ::-webkit-scrollbar-track {
@@ -98,66 +95,3 @@ body {
 	height: 100%;
 }
 
-.--animate {
-	border: 2px dotted transparent;
-}
-
-.facebook {
-	border-bottom-color: #3b5998;
-}
-
-.twitter {
-	border-bottom-color: #1da1f2;
-}
-
-.linkedin {
-	border-bottom-color: #0a66c2;
-}
-
-.whatsapp {
-	border-bottom-color: #25d366;
-}
-
-.github {
-	border-bottom-color: #171515;
-}
-
-.dark .github {
-	border-bottom-color: #f2f2f2;
-}
-
-.whatsapp {
-	border-bottom-color: #25d366;
-}
-
-.--animate:hover {
-	animation-name: rotation-animation;
-	animation-duration: 5s;
-	animation-iteration-count: infinite;
-	animation-timing-function: linear;
-}
-
-.--animate:hover .--animate-reverse {
-	animation-name: rotation-animation-reverse;
-	animation-duration: 5s;
-	animation-iteration-count: infinite;
-	animation-timing-function: linear;
-}
-
-@keyframes rotation-animation {
-	from {
-		transform: rotate(-360deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
-}
-
-@keyframes rotation-animation-reverse {
-	from {
-		transform: rotate(360deg);
-	}
-	to {
-		transform: rotate(-360deg);
-	}
-}
