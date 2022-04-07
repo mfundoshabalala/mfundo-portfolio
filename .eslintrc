@@ -29,17 +29,9 @@
 	"plugins": ["@typescript-eslint", "import", "jsx-a11y", "prefer-arrow"],
 	"root": true,
 	"rules": {
-		// "no-console": "off",
+		"no-use-before-define": "off",
 		"jsx-a11y/anchor-is-valid": "off",
-		// "anchor-is-valid": "off",
 		"react/jsx-props-no-spreading": "off",
-		// "react/react-in-jsx-scope": "off",
-		// "import/no-extraneous-dependencies": [
-		// 	"error",
-		// 	{
-		// 		"devDependencies": true
-		// 	}
-		// ],
 		"import/extensions": [
 			"error",
 			"ignorePackages",
