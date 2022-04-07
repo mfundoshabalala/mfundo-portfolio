@@ -1,17 +1,19 @@
 import { AppProps } from 'next/app';
-import { AnimatePresence } from 'framer-motion';
+import { config } from '@fortawesome/fontawesome-svg-core';
+import '@fortawesome/fontawesome-svg-core/styles.css';
 // global app styles + tailwindcss default styles
 import '../styles/globals.css';
+import 'lib/fontawesome';
 // basic site layout component
-import BasicLayout from 'components/layout/BasicLayout';
+import BasicSiteLayout from 'components/layout/BasicSiteLayout';
+
+config.autoAddCss = false;
 
 function App({ Component, pageProps, router }: AppProps): JSX.Element {
 	return (
-		<AnimatePresence exitBeforeEnter>
-			<BasicLayout>
-				<Component {...pageProps} key={router.route} />
-			</BasicLayout>
-		</AnimatePresence>
+		<BasicSiteLayout>
+			<Component {...pageProps} key={router.route} />
+		</BasicSiteLayout>
 	);
 }
 
