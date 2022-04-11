@@ -3,8 +3,8 @@ import { NextPage } from 'next';
 // Pages Section Components
 import HomeSection from 'components/pages/HomeSection';
 import AboutSection from 'components/pages/AboutSection';
-import ContactSection from 'components/pages/ContactSection';
 import ProjectsSection from 'components/pages/ProjectsSection';
+// import ContactSection from 'components/pages/ContactSection';
 
 const Home: NextPage = () => (
 	<>
@@ -15,7 +15,7 @@ const Home: NextPage = () => (
 		<HomeSection />
 		<AboutSection />
 		<ProjectsSection />
-		<ContactSection />
+		{/* <ContactSection /> */}
 	</>
 );
 
