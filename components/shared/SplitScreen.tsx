@@ -9,7 +9,11 @@ interface SplitScreenInterface {
 
 type SplitScreenProps = React.FunctionComponent<SplitScreenInterface>;
 
-const SplitScreen: SplitScreenProps = ({ children, leftWeight = 1, rightWeight = 1 }) => {
+const SplitScreen: SplitScreenProps = ({
+	children,
+	leftWeight = 1,
+	rightWeight = 1,
+}) => {
 	const [left, right] = children;
 
 	return (

@@ -9,13 +9,16 @@ interface NavItemInterface {
 
 type NavItemProps = React.FunctionComponent<NavItemInterface>;
 
-const NavItem: NavItemProps = ({ linkName, sectionName, duration = '1000', activeClass = 'active' }) => (
+const NavItem: NavItemProps = ({
+	linkName,
+	sectionName,
+	activeClass = 'active',
+}) => (
 	<li className="">
 		<Link
 			className="hover:opacity-100 hover:underline underline-offset-4 decoration-wavy decoration-2 decoration-orange-400 tracking-wide cursor-pointer"
 			activeClass={activeClass}
 			to={sectionName}
-			duration={duration}
 			smooth
 		>
 			{linkName}

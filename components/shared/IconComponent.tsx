@@ -5,7 +5,7 @@ import React from 'react';
 interface IconInterface {
 	icon: IconProp;
 	size?: SizeProp | undefined;
-	href?: string;
+	href?: string | undefined;
 	bounce?: boolean | undefined;
 	download?: string;
 	text?: string;
@@ -13,8 +13,21 @@ interface IconInterface {
 
 type IconComponentProps = React.FunctionComponent<IconInterface>;
 
-const IconComponent: IconComponentProps = ({ icon, size = '2x', href, bounce, download, text }) => (
-	<a target="_blank" download={download} href={href} rel="noreferrer" className="flex items-center gap-x-1">
+const IconComponent: IconComponentProps = ({
+	icon,
+	size = '2x',
+	href,
+	bounce,
+	download,
+	text,
+}) => (
+	<a
+		target="_blank"
+		download={download}
+		href={href}
+		rel="noreferrer"
+		className="flex items-center gap-x-1"
+	>
 		<FontAwesomeIcon
 			bounce={bounce}
 			icon={icon}

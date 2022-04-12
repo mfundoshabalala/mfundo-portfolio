@@ -4,7 +4,9 @@ type HeaderProps = React.FunctionComponent<{
 }>;
 
 const Header: HeaderProps = ({ children, className }) => (
-	<header className={`w-full fixed top-0 left-0 z-50 ${className}`}>{children}</header>
+	<header className={`w-full fixed top-0 left-0 z-50 ${className}`}>
+		{children}
+	</header>
 );
 
 export default Header;
