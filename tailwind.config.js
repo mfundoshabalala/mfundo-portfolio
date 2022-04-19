@@ -7,6 +7,8 @@ module.exports = {
 		extend: {
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+				'food-pattern': `url("/images/svg/i-like-food.svg")`,
+				'cogs-pattern': `url("/images/svg/floating-cogs.svg")`,
 			},
 		},
 	},
