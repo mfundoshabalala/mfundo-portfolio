@@ -48,7 +48,6 @@
 	.dark-section {
 		@apply bg-gradient-radial from-gray-700 via-slate-800 to-gray-900 text-white;
 	}
-
 }
 
 html {
@@ -64,8 +63,8 @@ body {
 	height: 100vh;
 	padding: 0;
 	margin: 0;
-	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
-		Helvetica Neue, sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -94,4 +93,3 @@ body {
 #__next {
 	height: 100%;
 }
-
