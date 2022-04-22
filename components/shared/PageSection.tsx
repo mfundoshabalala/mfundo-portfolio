@@ -22,7 +22,7 @@ const PageSection: PageSectionProps = ({
 			}`}
 		>
 			<div
-				className={`flex h-full w-full justify-center items-center ${class2}`}
+				className={`flex flex-col h-full justify-center items-center ${class2}`}
 			>
 				{children}
 			</div>
