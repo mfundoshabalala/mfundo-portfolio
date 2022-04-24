@@ -61,7 +61,8 @@
 		"allowSyntheticDefaultImports": true,
 		"resolveJsonModule": true,
 		"isolatedModules": true,
-		"incremental": true
+		"incremental": true,
+		"noEmit": true
 	},
 	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
 	"exclude": ["node_modules", ".history"]
