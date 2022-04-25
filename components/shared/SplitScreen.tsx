@@ -17,7 +17,7 @@ const SplitScreen: SplitScreenProps = ({
 	const [left, right] = children;
 
 	return (
-		<Container className="flex flex-wrap gap-4">
+		<Container className="flex flex-wrap gap-4 px-12">
 			<Pane weight={leftWeight}>{left}</Pane>
 			<Pane weight={rightWeight}>{right}</Pane>
 		</Container>
