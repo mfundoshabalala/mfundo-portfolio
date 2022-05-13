@@ -2,10 +2,10 @@ name: Vercel Continuous Integration
 
 on:
   push:
-    branches: [main, develop, feature/*, refactor/*, refactor, hotfix/*]
+    branches: [main, develop, feature/*, refactor, hotfix/*]
 
   pull_request:
-    branches: [main, develop, feature/*, refactor/*, refactor, hotfix/*]
+    branches: [main, develop, feature/*, refactor, hotfix/*]
 
 jobs:
   test:
@@ -15,4 +15,5 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 16
+      - name: Install dependencies
       - run: npm install
