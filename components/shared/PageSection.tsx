@@ -17,12 +17,14 @@ const PageSection: PageSectionProps = ({
 	return (
 		<section
 			id={pageID}
-			className={`min-h-screen w-screen relative ${class1} ${
+			className={`min-h-screen w-screen relative ${class1 ?? ''} ${
 				lightSection ? '' : 'dark-section'
 			}`}
 		>
 			<div
-				className={`flex flex-col h-full justify-center items-center ${class2}`}
+				className={`flex flex-col h-full justify-center items-center ${
+					class2 ?? ''
+				}`}
 			>
 				{children}
 			</div>
