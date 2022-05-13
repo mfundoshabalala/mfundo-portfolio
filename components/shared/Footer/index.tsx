@@ -1,23 +1,42 @@
-import { FunctionComponent } from "react";
-// components
-// import Attributions from "../Attributions";
-import Copyright from "../Copyright";
-// NOTE: Maybe move the social sites to the side of each page and fix
-import SocialLinks from "./components/SocialLinks";
+import Newsletter from './components/Newsletter';
+import SocialLinks from './components/SocialLinks';
 
-// TODO: Rethink the design of the footer.
-const Footer: FunctionComponent = () => (
-	<footer className="border border-solid border-gray-200 mt-12 py-12 px-2 md:px-8 shadow-2xl">
-		<div className="container space-y-2 mx-auto flex flex-col flex-wrap justify-between items-center">
-			<div className="w-full flex flex-row flex-wrap space-y-2 md:space-y-0 md:space-x-2">
-				<div className="bg-rose-500 flex-1">item-1</div>
-				<div className="bg-rose-500 flex-1">item-2</div>
-			</div>
-			<div className="w-full flex flex-row flex-wrap justify-center items-center space-y-2 md:space-y-0 md:space-x-2">
-				<SocialLinks className="flex-1" />
-				<Copyright className="flex-1" />
-			</div>
-		</div>
+const Footer: React.FC = () => (
+	<footer className="relative pt-10 pb-5 font-light text-gray-900 border">
+		<section className="container relative z-10 flex flex-col justify-between mx-auto gap-y-8">
+			<section className="flex flex-row flex-wrap justify-between gap-4">
+				<Newsletter title="Subscribe to my newsletter" />
+				<SocialLinks title="Connect with me" />
+			</section>
+			<section className="text-base text-center">
+				Made from scratch using{' '}
+				<a href="https://nextjs.org" target="_blank" className="pl-1 link" rel="noreferrer">
+					Next.js
+				</a>
+				,
+				<a href="https://vercel.com/home" target="_blank" className="pl-1 link" rel="noreferrer">
+					Vercel
+				</a>{' '}
+				and
+				<a href="https://tailwindcss.com/" target="_blank" className="pl-1 link" rel="noreferrer">
+					Tailwind CSS
+				</a>{' '}
+				together with the images from
+				<a href="https://storyset.com/technology" target="_blank" rel="noreferrer" className="pl-1 link">
+					Storyset
+				</a>
+				. The code is
+				<a
+					href="https://github.com/shbmfu003/professional_dev_portfolio"
+					target="_blank"
+					rel="noreferrer"
+					className="pl-1 link"
+				>
+					open-source
+				</a>
+				.
+			</section>
+		</section>
 	</footer>
 );
 

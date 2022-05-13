@@ -1,0 +1,171 @@
+/* fonts imports */
+/* @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900&family=Lato:wght@100;300;400;700;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Open+Sans:wght@300;400;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/* purgecss start ignore */
+@tailwind base;
+@tailwind components;
+/* purgecss end ignore */
+@tailwind utilities;
+
+@layer components {
+	.text-shadow {
+		text-shadow: 0 0 2px rgb(0 0 0 / 30%);
+	}
+
+	.form-input {
+		@apply flex-1 px-4 py-2 border border-gray-300 rounded shadow-lg focus:shadow-sm;
+	}
+
+	.btn {
+		@apply btn-shadow border whitespace-nowrap cursor-pointer text-center rounded-md px-6 py-2 shadow-sm;
+	}
+
+	.btn-shadow {
+		@apply shadow-xl active:shadow-sm hover:shadow-md mix-blend-multiply;
+	}
+
+	.btn-primary {
+		@apply from-blue-500  via-blue-600  to-blue-700 bg-gradient-to-br
+		hover:from-blue-800 hover:via-blue-700 hover:to-blue-600 text-white;
+	}
+
+	.primary-gradient {
+		@apply bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600;
+	}
+
+	.btn-nav-active {
+		@apply text-white
+		relative after:absolute after:bottom-0 after:w-full after:left-0
+		after:primary-gradient after:h-full after:z-[-1] after:rounded-md;
+	}
+
+	.btn-nav-inactive {
+		@apply relative after:absolute after:bottom-0 after:w-full after:left-0
+		hover:after:primary-gradient after:h-[3px] after:z-[-1] after:rounded-md;
+	}
+
+	.link {
+		@apply underline text-blue-600 hover:text-blue-800 visited:text-purple-600 font-bold;
+	}
+
+	.test {
+		@apply bg-red-500 sm:bg-yellow-500 md:bg-green-500 lg:bg-blue-500;
+	}
+
+	.modal-background {
+		@apply fixed top-0 left-0 z-50 h-full w-full overflow-auto bg-black bg-opacity-50;
+	}
+
+	.modal-body {
+		@apply bg-white w-1/2 mx-auto p-4 rounded-md shadow-lg text-gray-800;
+	}
+}
+
+html {
+	overflow: hidden;
+}
+
+body {
+	overflow: auto;
+}
+
+html,
+body {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+		Helvetica Neue, sans-serif;
+}
+
+::-webkit-scrollbar {
+	width: 0.6rem;
+}
+
+::-webkit-scrollbar-track {
+	border-radius: 99999px;
+	padding: 0;
+}
+
+::-webkit-scrollbar-thumb {
+	background-clip: border-box;
+	border: 4px solid rgba(0, 0, 0, 0);
+	border-radius: 99999px;
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.1, rgba(28, 58, 148, 0.75)),
+		color-stop(0.6, rgba(73, 125, 189, 0.75)),
+		color-stop(0.95, rgba(28, 58, 148, 0.75))
+	);
+}
+
+#__next {
+	height: 100%;
+}
+
+.--animate {
+	border: 2px dotted transparent;
+}
+
+.facebook {
+	border-bottom-color: #3b5998;
+}
+
+.twitter {
+	border-bottom-color: #1da1f2;
+}
+
+.linkedin {
+	border-bottom-color: #0a66c2;
+}
+
+.whatsapp {
+	border-bottom-color: #25d366;
+}
+
+.github {
+	border-bottom-color: #171515;
+}
+
+.dark .github {
+	border-bottom-color: #f2f2f2;
+}
+
+.whatsapp {
+	border-bottom-color: #25d366;
+}
+
+.--animate:hover {
+	animation-name: rotation-animation;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+.--animate:hover .--animate-reverse {
+	animation-name: rotation-animation-reverse;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes rotation-animation {
+	from {
+		transform: rotate(-360deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes rotation-animation-reverse {
+	from {
+		transform: rotate(360deg);
+	}
+	to {
+		transform: rotate(-360deg);
+	}
+}

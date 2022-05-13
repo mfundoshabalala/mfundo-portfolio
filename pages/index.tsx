@@ -1,31 +1,26 @@
-import Head from "next/head";
-import Image from "next/image";
+import Head from 'next/head';
+import { NextPage } from 'next';
+// Layout Component
+import SplitScreen from 'components/layout/SplitScreen';
+// Higher Order Component
+// import Portal from 'HOC/Portal';
+// Shared Components
+// import Modal from 'components/Modal';
 //
-import TypedText from "components/shared/TypedText";
-import { NextPage } from "next";
+import IntroductionImage from 'components/features/IntroductionImage';
+import IntroductionDescription from 'components/features/IntroductionDescription';
+import HomeSectionComponent from 'components/pages/HomeSectionComponent';
 
-// TODO: Add a catchy background song on full page load
 const Home: NextPage = () => (
 	<>
 		<Head>
 			<link rel="icon" href="/favicon.ico" />
 			<title>Home</title>
 		</Head>
-		<div className="h-full font-body filter drop-shadow-md">
-			<div className="h-full flex flex-row-reverse justify-evenly">
-				<div className="relative flex-1">
-					<Image
-						className="object-contain object-bottom"
-						src="/images/programmer-animate.svg"
-						alt="Picture of the author"
-						layout="fill"
-					/>
-				</div>
-				<div className="relative flex-1 flex flex-col">
-					<TypedText />
-				</div>
-			</div>
-		</div>
+		<HomeSectionComponent />
+		{/* <Portal>
+			<Modal />
+		</Portal> */}
 	</>
 );
 

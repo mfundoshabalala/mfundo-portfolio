@@ -1,17 +1,9 @@
-import Link from "next/link";
-import { FunctionComponent } from "react";
+import Link from 'next/link';
 
-const BrandLogo: FunctionComponent = () => (
-	<div className="font-black text-5xl">
+const BrandLogo: React.FC = () => (
+	<div className="px-1 py-2 text-2xl font-black tracking-tighter text-transparent min-w-max font-firaSans bg-gradient-to-r bg-clip-text from-gray-700 to-gray-600">
 		<Link href="/">
-			<a className="block">
-				<span className="">M</span>
-				<span className="">f</span>
-				<span className="">u</span>
-				<span className="">n</span>
-				<span className="">d</span>
-				<span className="">o</span>
-			</a>
+			<a className="block mx-2 uppercase hover:line-through min-w-max">Mfundo Shabalala</a>
 		</Link>
 	</div>
 );

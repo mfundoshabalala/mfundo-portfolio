@@ -1,22 +1,27 @@
-/* eslint-disable react/jsx-props-no-spreading */
-import { AppProps } from "next/app";
-import { ThemeProvider } from "next-themes";
-import { UserProvider } from "@auth0/nextjs-auth0";
-// layout component
-import BasicLayout from "components/layout/BasicLayout";
+/* eslint-disable no-console */
+import { AppProps } from 'next/app';
+import { AnimatePresence } from 'framer-motion';
 // global app styles + tailwindcss default styles
-import "styles/base.css";
+import '../styles/globals.css';
+// basic site layout component
+import BasicLayout from 'components/layout/BasicLayout';
+//
+function App({ Component, pageProps, router }: AppProps): JSX.Element {
+	if (typeof window !== 'undefined') {
+		console.log('You are on the browser');
+	} else {
+		console.log('You are on the server');
+	}
 
-function MyApp({ Component, pageProps }: AppProps): JSX.Element {
 	return (
-		<UserProvider>
-			<ThemeProvider attribute="class">
+		<>
+			<AnimatePresence exitBeforeEnter>
 				<BasicLayout>
-					<Component {...pageProps} />
+					<Component {...pageProps} key={router.route} />
 				</BasicLayout>
-			</ThemeProvider>
-		</UserProvider>
+			</AnimatePresence>
+		</>
 	);
 }
 
-export default MyApp;
+export default App;

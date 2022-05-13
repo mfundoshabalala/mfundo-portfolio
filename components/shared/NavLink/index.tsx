@@ -1,39 +1,40 @@
-import Link from "next/link";
-import PropTypes from "prop-types";
-import classnames from "classnames";
-import { FunctionComponent } from "react";
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
-interface INavLink {
-	name: string;
-	url: string;
-	bgColor?: string;
+interface NavLinkProps {
+	href: string;
+	children: React.ReactNode;
 }
 
-// FIXME: Make each link an active link when active
-const NavLink: FunctionComponent<INavLink> = props => {
-	const { name, url, bgColor = "indigo-500" } = props;
+const NavLink: React.FC<NavLinkProps> = ({ children, href }) => {
+	const router = useRouter();
+
+	const handleClick = (event: { preventDefault: () => void }) => {
+		event.preventDefault();
+		// eslint-disable-next-line no-void
+		void router.push(href);
+	};
+
 	return (
-		<div
-			className={classnames(
-				`hover:bg-${bgColor}`,
-				"transform -translate-x-5 flex-1 hover:text-white rounded-sm px-3 shadow-sm"
-			)}
-		>
-			<Link href={url}>
-				<a className="block">{name}</a>
+		<li>
+			<Link href={href}>
+				<a
+					className={classNames('relative btn', router.asPath === href ? 'btn-nav-active' : 'btn-nav-inactive')}
+					onClick={handleClick}
+					aria-hidden="true"
+				>
+					{children}
+				</a>
 			</Link>
-		</div>
+		</li>
 	);
 };
 
 export default NavLink;
 
 NavLink.propTypes = {
-	name: PropTypes.string.isRequired,
-	url: PropTypes.string.isRequired,
-	bgColor: PropTypes.string,
-};
-
-NavLink.defaultProps = {
-	bgColor: "indigo-500",
+	href: PropTypes.string.isRequired,
+	children: PropTypes.node.isRequired,
 };

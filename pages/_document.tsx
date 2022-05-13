@@ -1,13 +1,14 @@
-/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
-import Document, { Html, Head, Main, NextScript } from "next/document";
+// eslint-disable-next-line @next/next/no-document-import-in-page
+import Document, { Html, Head, Main, NextScript } from 'next/document';
 
 class MyDocument extends Document {
-	render() {
+	render(): JSX.Element {
 		return (
-			<Html>
+			<Html lang="en">
 				<Head />
-				<body className="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200">
+				<body className="text-gray-900 bg-gray-100">
 					<Main />
+					<div id="modalportal" />
 					<NextScript />
 				</body>
 			</Html>

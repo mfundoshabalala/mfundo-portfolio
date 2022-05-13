@@ -1,23 +1,26 @@
-import Head from "next/head";
-import { FunctionComponent } from "react";
+import Head from 'next/head';
+import { NextPage } from 'next';
 // components
-import BannerLayout from "components/layout/BannerLayout";
+import BannerLayout from 'components/layout/BannerLayout';
+import BlogPostsList from 'components/features/BlogPostsList';
 
-const Blog: FunctionComponent = () => (
-	<>
-		<Head>
-			<title>Blog Posts</title>
-			<link rel="icon" href="/favicon.ico" />
-		</Head>
-		<BannerLayout
-			summary="This is the place where I share my experiences and expertise. Enjoy."
-			color="text-gray-50"
-			bgColor="bg-green-500"
-			title="Blog Posts"
-		>
-			<p>Blog posts</p>
-		</BannerLayout>
-	</>
-);
+const Blog: NextPage = () => {
+	const pageDetails = {
+		title: 'Blog Posts',
+		bgColor: 'from-green-800 via-green-500 via-green-500 to-green-800',
+		summary: 'This is the place where I share my experiences and expertise. Enjoy.',
+	};
+
+	return (
+		<>
+			<Head>
+				<title>Blog Posts</title>
+			</Head>
+			<BannerLayout {...pageDetails}>
+				<BlogPostsList />
+			</BannerLayout>
+		</>
+	);
+};
 
 export default Blog;

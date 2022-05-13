@@ -1,17 +1,17 @@
-import { NextPage } from "next";
-import PropTypes from "prop-types";
+import { FunctionComponent } from 'react';
+import { motion } from 'framer-motion';
+import PropTypes from 'prop-types';
 // page component(s)
-import Header from "components/shared/Header";
-import Footer from "components/shared/Footer";
-// page props interface(s)
-// import BackgroundAnimatedIcon from "components/shared/BackgroundAnimationIcon";
+import Header from 'components/shared/Header';
+import Footer from 'components/shared/Footer';
 
-const BasicLayout: NextPage<IBasicLayout> = ({ children }) => (
-	<div className="h-full flex flex-col relative">
+const BasicLayout: FunctionComponent<IBasicLayout> = ({ children }) => (
+	<div className="relative flex flex-col h-screen overflow-x-hidden text-gray-600">
 		<Header />
-		<main className="flex-1">{children}</main>
+		<motion.main initial="initial" animate="enter" exit="exit" className="relative z-10 flex-1">
+			{children}
+		</motion.main>
 		<Footer />
-		{/* <BackgroundAnimatedIcon   /> */}
 	</div>
 );
 

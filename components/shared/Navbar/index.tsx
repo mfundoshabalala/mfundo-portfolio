@@ -1,19 +1,32 @@
-import { FunctionComponent } from "react";
-// components
-import NavLink from "components/shared/NavLink";
+import classNames from 'classnames';
 
-const Navbar: FunctionComponent = () => (
-	<>
-		<nav className="leading-9 flex-1 flex flex-row justify-center">
-			<ul className="flex flex-row justify-center space-x-3">
-				<NavLink name="About" url="/about" />
-				<NavLink name="Portfolio" url="/portfolio" bgColor="blue-500" />
-				<NavLink name="Blog" url="/blog" bgColor="green-500" />
-				<NavLink name="Resume" url="/cv" bgColor="yellow-500" />
-				<NavLink name="Contact" url="/contact" bgColor="gray-500" />
-			</ul>
-		</nav>
-	</>
-);
+import NavLink from 'components/shared/NavLink';
+
+interface NavbarProps {
+	isOpen: boolean;
+}
+
+const Navbar: React.FC<NavbarProps> = (props) => {
+	const { isOpen } = props;
+
+	return (
+		<>
+			<nav
+				className={classNames(
+					isOpen ? 'flex justify-center' : 'hidden md:flex',
+					'flex-row justify-center items-center flex-1 md:justify-end'
+				)}
+			>
+				<ul className="flex flex-col space-x-2 md:flex-row min-w-max">
+					<NavLink href="/about">About</NavLink>
+					<NavLink href="/portfolio">Portfolio</NavLink>
+					<NavLink href="/cv">Resume</NavLink>
+					<NavLink href="/blog">Blog</NavLink>
+					<NavLink href="/contact">Contact</NavLink>
+				</ul>
+			</nav>
+		</>
+	);
+};
 
 export default Navbar;
