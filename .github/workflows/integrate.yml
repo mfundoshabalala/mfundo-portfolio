@@ -1,8 +1,6 @@
 name: Vercel Continuous Integration
 on:
   push:
-    ignore-branch:
-      - master
     branches: [main, develop, feature/*, refactor/*, hotfix/*]
 
   pull_request:
