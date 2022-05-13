@@ -47,6 +47,8 @@
 			{
 				"extensions": [".jsx", ".tsx", ".js", ".ts"]
 			}
-		]
+		],
+		"@typescript-eslint/no-explicit-any": "off"
+
 	}
 }
